@@ -1,0 +1,25 @@
+.requirement-list {
+  @media (min-width: $phone_md) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 48px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  & &__col {
+    display: flex;
+
+    @media (min-width: $phone_md) {
+      padding: 0 10px;
+      width: 50%;
+    }
+
+    @media (min-width: $tablet) {
+      padding: 0 15px;
+    }
+  }
+}

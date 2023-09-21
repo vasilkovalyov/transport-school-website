@@ -1,0 +1,43 @@
+.section-our-benefits {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $widescreen) {
+    padding-bottom: 235px;
+  }
+
+  & &__bg {
+    @include absoluteCover;
+  }
+
+  & &__bg-image {
+    @include coverImage;
+  }
+
+  & &__body {
+    position: relative;
+    z-index: 1;
+    background-color: $light;
+    padding: 20px;
+    max-width: 945px;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      padding: 60px 70px;
+    }
+
+    @media (min-width: $widescreen) {
+      padding: 98px 104px 64px;
+    }
+  }
+
+  & &__heading {
+    margin-bottom: 42px;
+  }
+}

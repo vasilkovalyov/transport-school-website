@@ -1,0 +1,31 @@
+.btn,
+button {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 14px 38px;
+  color: $dark;
+  text-align: center;
+  font-family: $font-family-base;
+  font-weight: $font-black;
+  color: $dark;
+  font-size: $font-size-sm;
+  background-color: $primary;
+
+  @media (min-width: $laptop) {
+    font-size: $font-size-md;
+    padding: 18px 48px;
+  }
+
+  &::before {
+    content: '';
+    @include absoluteCover;
+    background: url('/images/paper.png');
+    background-size: cover;
+    opacity: 0.4;
+  }
+
+  &.btn--secondary {
+    background-color: $light;
+  }
+}

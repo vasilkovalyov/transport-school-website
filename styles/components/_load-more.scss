@@ -1,0 +1,18 @@
+.load-more {
+  font-family: $headings-font-family;
+  font-size: $font-size-md;
+  font-weight: $font-medium;
+  color: $base-text-color;
+  background-color: transparent;
+  text-transform: initial;
+  padding: 0;
+
+  &::before {
+    display: none;
+  }
+
+  &:hover {
+    color: $primary;
+    opacity: 1;
+  }
+}

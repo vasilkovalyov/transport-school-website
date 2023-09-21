@@ -1,0 +1,23 @@
+.section-price-service {
+  padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    padding: 64px 0;
+  }
+
+  & &__heading-content {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $widescreen) {
+      margin-bottom: 126px;
+    }
+  }
+
+  & &__heading {
+    margin-bottom: 30px;
+  }
+}

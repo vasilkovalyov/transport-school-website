@@ -1,0 +1,83 @@
+.section-course-for-people {
+  padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    padding: 80px 0;
+  }
+
+  @media (min-width: $tablet_lg) {
+    padding: 170px 0 200px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  & &__heading {
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 70px;
+    }
+
+    @media (min-width: $tablet_lg) {
+      margin-bottom: 266px;
+    }
+  }
+
+  &__body {
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: $tablet_lg) {
+      padding: 0 30px;
+    }
+  }
+
+  &__decor-image {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 50px;
+    height: 100%;
+    object-fit: cover;
+
+    @media (max-width: $tablet_lg_max) {
+      display: none;
+    }
+
+    @media (min-width: $tablet_lg) {
+      width: 1135px;
+      height: 895px;
+
+      top: 31px;
+      left: 14px;
+    }
+
+    @media (min-width: $laptop) {
+      width: 1137px;
+      height: 931px;
+      left: 41px;
+    }
+  }
+
+  &__text-content {
+    @media (min-width: $tablet_lg) {
+      transform: rotate(-5.147deg);
+    }
+
+    p {
+      font-size: $font-size-md;
+
+      &:not(:last-child) {
+        margin-bottom: 36px;
+      }
+
+      strong {
+        font-family: $headings-font-family;
+        font-weight: $font-medium;
+      }
+    }
+  }
+}

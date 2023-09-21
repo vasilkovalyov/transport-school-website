@@ -1,0 +1,37 @@
+.section-cta-questions {
+  padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    padding: 80px 0;
+  }
+
+  @media (min-width: $widescreen) {
+    padding: 90px 0 200px;
+  }
+
+  & &__heading {
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $widescreen) {
+      margin-bottom: 100px;
+    }
+  }
+
+  & &__action {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  & &__btn {
+    padding-left: 14px;
+    padding-right: 14px;
+    max-width: 400px;
+    width: 100%;
+  }
+}

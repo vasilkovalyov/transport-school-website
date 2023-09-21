@@ -1,0 +1,29 @@
+.education-cards-list {
+  @media (max-width: $tablet_lg_max) {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet_lg) {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 -15px;
+  }
+
+  &__col {
+    @media (min-width: $tablet_lg) {
+      width: 33.33%;
+      padding: 0 15px;
+    }
+
+    &:last-child {
+      .education-card {
+        @media (max-width: $tablet_max) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

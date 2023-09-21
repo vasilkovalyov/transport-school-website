@@ -1,0 +1,60 @@
+.achivment {
+  margin-bottom: 24px;
+
+  @media (min-width: $widescreen) {
+    margin-bottom: 66px;
+  }
+
+  & &__heading {
+    color: $primary;
+    font-family: $headings-font-family;
+    margin-bottom: 0;
+  }
+
+  & &__heading--large {
+    font-size: 80px;
+
+    @media (min-width: $tablet) {
+      font-size: 120px;
+    }
+
+    @media (min-width: $widescreen) {
+      font-size: 202px;
+    }
+  }
+
+  & &__heading--medium {
+    font-size: 60px;
+
+    @media (min-width: $tablet) {
+      font-size: 80px;
+    }
+
+    @media (min-width: $widescreen) {
+      font-size: 92px;
+    }
+  }
+
+  & &__heading--small {
+    font-size: 40px;
+
+    @media (min-width: $tablet) {
+      font-size: 60px;
+    }
+
+    @media (min-width: $widescreen) {
+      font-size: 82px;
+    }
+  }
+
+  & &__text {
+    max-width: 358px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: $headings-font-family;
+
+    @media (min-width: $tablet) {
+      font-size: $font-size-md;
+    }
+  }
+}

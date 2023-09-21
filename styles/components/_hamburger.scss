@@ -1,0 +1,120 @@
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &.is-active:hover {
+    opacity: 0.7;
+  }
+
+  &.is-active &-inner,
+  &.is-active &-inner::before,
+  &.is-active &-inner::after {
+    background-color: $light;
+  }
+
+  &-box {
+    width: 34px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+  }
+
+  &-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+  &-inner,
+  &-inner::before,
+  &-inner::after {
+    width: 30px;
+    height: 2px;
+    background-color: $light;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+
+    @media (min-width: $tablet) {
+      width: 34px;
+      height: 3px;
+    }
+  }
+  &-inner::before,
+  &-inner::after {
+    content: '';
+    display: block;
+  }
+
+  &-inner::before {
+    top: -8px;
+
+    @media (min-width: $tablet) {
+      top: -10px;
+    }
+  }
+
+  &-inner::after {
+    bottom: -6px;
+
+    @media (min-width: $tablet) {
+      bottom: -10px;
+    }
+  }
+
+  &-inner {
+    top: auto;
+    bottom: 0;
+    transition-duration: 0.13s;
+    transition-delay: 0.13s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  &-inner::after {
+    top: -16px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+      opacity 0.1s linear;
+
+    @media (min-width: $tablet) {
+      top: -20px;
+    }
+  }
+  &-inner::before {
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  &.is-active &-inner {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+    transition-delay: 0.22s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  &.is-active &-inner::after {
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+      opacity 0.1s 0.22s linear;
+  }
+  &.is-active &-inner::before {
+    top: 0;
+    transform: rotate(-90deg);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+      transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+}

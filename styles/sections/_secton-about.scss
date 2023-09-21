@@ -1,0 +1,56 @@
+.section-about {
+  padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    padding: 80px 0;
+  }
+
+  @media (min-width: $widescreen) {
+    padding: 140px 0 100px;
+  }
+
+  & &__body {
+    position: relative;
+    padding: 40px 0;
+    background-color: $light;
+
+    @media (min-width: $tablet) {
+      padding: 80px 0;
+      border-right: 14px solid $gold;
+    }
+
+    @media (min-width: $widescreen) {
+      padding: 100px 0;
+      border-right: 38px solid $gold;
+    }
+
+    &::before {
+      content: '';
+      background-image: url('/images/compamy-descrription.png');
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 1000%;
+    }
+  }
+
+  & &__text-content {
+    position: relative;
+    z-index: 1;
+    max-width: 880px;
+    width: 100%;
+    padding-right: 30px;
+
+    h2 {
+      font-family: $font-family-base;
+      font-size: $font-size-xxxl;
+      font-weight: $font-medium;
+      margin-bottom: 40px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+  }
+}

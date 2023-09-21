@@ -1,0 +1,93 @@
+// devices viewport width starts at:
+
+$phone_xs: 320px;
+$phone_xs_max: 319px;
+$phone_sm: 375px;
+$phone_sm_max: 374px;
+$phone_md: 576px;
+$phone_md_max: 575px;
+$tablet: 768px;
+$tablet_max: 767px;
+$tablet_lg: 1024px;
+$tablet_lg_max: 1023px;
+$laptop: 1280px;
+$laptop_max: 1279px;
+$laptop_md: 1366px;
+$laptop_md_max: 1365px;
+$widescreen: 1440px;
+$widescreen_max: 1439px;
+$widescreen_md: 1600px;
+$widescreen_md_max: 1599px;
+
+$black-default: #000000;
+$black: #151618;
+$white: #ffffff;
+$light: #f9f9f9;
+$dark: #343331;
+$gold: #ffce5d;
+$grey: #666666;
+$green: #21a179;
+
+$primary: $gold;
+
+$animation-speed: 0.3s;
+
+$base-background-body: $white;
+$base-text-color: $black;
+
+$base-shadow: 0px 0px 0px 0px rgba($black-default, 0.03),
+  0px 17px 37px 0px rgba($black-default, 0.03),
+  0px 67px 67px 0px rgba($black-default, 0.03),
+  0px 151px 91px 0px rgba($black-default, 0.02),
+  0px 268px 107px 0px rgba($black-default, 0),
+  0px 419px 117px 0px rgba($black-default, 0);
+
+$container-wide: 1140px;
+$container-gap-small: 20px;
+$container-gap-medium: 40px;
+
+$link-color: inherit;
+$link-decoration: none !default;
+$link-hover-color: $primary !default;
+$link-hover-decoration: none !default;
+
+$base-font-sans-serif: 'Inter', 'Arial', 'Helvetica Neue', 'Helvetica',
+  sans-serif;
+$base-font-serif: 'Montserrat Alternates', 'Times New Roman', 'Times',
+  'Baskerville', 'Georgia', serif;
+
+$font-family-base: $base-font-sans-serif;
+$headings-font-family: $base-font-serif;
+
+$font-thin: 100 !default;
+$font-extra-light: 200 !default;
+$font-light: 300 !default;
+$font-normal: 400 !default;
+$font-medium: 500 !default;
+$font-semibold: 600 !default;
+$font-bold: 700 !default;
+$font-black: 900 !default;
+
+$font-size-xs: 14px;
+$font-size-sm: 16px;
+$font-size-base: 18px;
+$font-size-md: 22px;
+$font-size-xl: 30px;
+$font-size-xxl: 34px;
+$font-size-xxxl: 36px;
+
+$font-base: $font-normal;
+$line-height-base: 1.2 !default;
+
+$headings-font-weight: $font-bold !default;
+$headings-line-height: 1.2 !default;
+$headings-color: $base-text-color !default;
+
+$input-placeholder: rgba($primary, 0.7);
+
+$modal-overlay-bg: rgba($black, 0.8);
+
+$hover-opacity-link: 0.7;
+
+$header-breakpoint-mob: $laptop;
+$header-breakpoint-mob_max: $header-breakpoint-mob - 1px;

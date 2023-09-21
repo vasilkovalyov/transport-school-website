@@ -1,0 +1,75 @@
+.section-contact-form {
+  padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    padding: 80px 0;
+  }
+
+  @media (min-width: $widescreen) {
+    padding: 90px 0 118px;
+  }
+
+  & &__heading {
+    margin-bottom: 48px;
+  }
+
+  & &__subheading {
+    margin-bottom: 44px;
+    font-weight: $font-light;
+  }
+
+  & &__form-title {
+    font-size: $font-size-sm;
+    font-weight: $font-medium;
+  }
+
+  & &__body {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  & &__form {
+    max-width: 360px;
+    height: 600px;
+    width: 100%;
+  }
+
+  & &__image {
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+    order: 2;
+
+    @media (min-width: $tablet) {
+      max-width: 300px;
+      margin: 0;
+      order: 0;
+    }
+
+    @media (min-width: $tablet_lg) {
+      max-width: 400px;
+    }
+
+    @media (min-width: $widescreen) {
+      position: relative;
+      top: 38px;
+      right: -46px;
+      max-width: 500px;
+    }
+  }
+
+  & &__require-message {
+    color: $grey;
+    font-family: $headings-font-family;
+    font-size: $font-size-sm;
+    font-weight: $font-medium;
+    line-height: 1.6;
+    width: 100%;
+  }
+}

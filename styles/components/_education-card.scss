@@ -1,0 +1,75 @@
+.education-card {
+  position: relative;
+  background-color: $light;
+  padding: 0 32px 36px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 42px;
+  @include animate(transform);
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &::before {
+    content: '';
+    @include absoluteCover;
+    background: url('/images/paper.png');
+    background-size: contain;
+    opacity: 0.5;
+  }
+
+  & &__image {
+    max-width: 190px;
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+      width: auto;
+    }
+  }
+
+  & &__body {
+    position: relative;
+    z-index: 1;
+    &:only-child {
+      padding-top: 30px;
+    }
+  }
+
+  & &__heading {
+    font-family: $font-family-base;
+    font-size: $font-size-xxxl;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+
+  & &__list {
+    @include listreset;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 56px;
+    }
+  }
+
+  & &__item {
+    font-size: $font-size-md;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  & &__action {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+  }
+
+  & &__price {
+    color: $green;
+    font-family: $headings-font-family;
+    font-size: $font-size-xxl;
+  }
+}

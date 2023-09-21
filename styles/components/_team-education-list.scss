@@ -1,0 +1,26 @@
+.team-education-list {
+  @media (min-width: $phone_md) {
+    margin: 0 -10px;
+  }
+
+  @media (min-width: $tablet_lg) {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 -15px;
+  }
+
+  & &__col {
+    display: flex;
+    margin: 0 auto;
+
+    @media (min-width: $phone_md) {
+      padding: 0 10px;
+      width: 50%;
+    }
+
+    @media (min-width: $tablet) {
+      padding: 0 15px;
+    }
+  }
+}

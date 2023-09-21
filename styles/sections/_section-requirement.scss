@@ -1,0 +1,19 @@
+.section-requirement {
+  padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    padding: 80px 0;
+  }
+
+  @media (min-width: $widescreen) {
+    padding: 140px 0 86px;
+  }
+
+  & &__heading {
+    margin-bottom: 40px;
+
+    @media (min-width: $widescreen) {
+      margin-bottom: 90px;
+    }
+  }
+}

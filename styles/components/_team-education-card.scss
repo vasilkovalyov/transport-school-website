@@ -1,0 +1,28 @@
+.team-education-card {
+  width: 100%;
+  margin-bottom: 40px;
+
+  & &__type {
+    text-transform: uppercase;
+    font-family: $font-family-base;
+    margin-bottom: 32px;
+  }
+
+  & &__body {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 36px 52px;
+    background-color: $white;
+  }
+
+  & &__heading {
+    font-weight: $font-light;
+    font-family: $font-family-base;
+  }
+
+  & &__price {
+    color: $green;
+    font-family: $headings-font-family;
+    font-size: 52px;
+  }
+}

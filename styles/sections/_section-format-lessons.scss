@@ -1,0 +1,42 @@
+.section-format-lessons {
+  padding: 40px 0;
+  color: $light;
+  background-color: $black;
+
+  @media (min-width: $tablet) {
+    padding: 80px 0;
+  }
+
+  @media (min-width: $widescreen) {
+    padding: 132px 0;
+  }
+
+  &.section-format-lessons--light {
+    color: $black;
+    background-color: transparent;
+  }
+
+  & &__heading-content {
+    max-width: 586px;
+    width: 100%;
+    margin: 0 auto 26px;
+
+    @media (min-width: $tablet) {
+      margin: 0 auto 80px;
+    }
+
+    @media (min-width: $widescreen) {
+      margin: 0 auto 174px;
+    }
+  }
+
+  & &__heading {
+    margin-bottom: 26px;
+  }
+
+  & &__subheading-text {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

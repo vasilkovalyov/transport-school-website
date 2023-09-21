@@ -1,0 +1,29 @@
+.blog-list {
+  @media (min-width: $phone_md) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 48px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-left: -14px;
+    margin-right: -14px;
+  }
+
+  & &__col {
+    display: flex;
+
+    @media (min-width: $phone_md) {
+      padding: 0 10px;
+      width: 50%;
+    }
+
+    @media (min-width: $tablet) {
+      padding: 0 14px;
+    }
+
+    @media (min-width: $tablet_lg) {
+      width: 33.33%;
+    }
+  }
+}

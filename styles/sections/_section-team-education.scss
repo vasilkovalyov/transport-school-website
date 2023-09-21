@@ -1,0 +1,39 @@
+.section-team-education {
+  padding: 40px 0;
+
+  @media (min-width: $widescreen) {
+    padding: 100px 0 90px;
+  }
+
+  & &__container {
+    max-width: 832px;
+  }
+
+  & &__heading-content {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $widescreen) {
+      margin-bottom: 114px;
+    }
+  }
+
+  & &__heading {
+    margin-bottom: 24px;
+  }
+
+  & &__action {
+    text-align: center;
+  }
+
+  .team-education-list {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 32px;
+    }
+  }
+}

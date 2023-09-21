@@ -1,0 +1,54 @@
+$h1-small: 36px;
+$h1-middle: 46px;
+$h1-large: 52px;
+
+$h2-small: 28px;
+$h2-middle: 44px;
+$h2-large: 52px;
+
+$h3-small: 26px;
+$h3-middle: 28px;
+$h3-large: 30px;
+
+$h4-small: 22px;
+$h4-middle: 24px;
+$h4-large: 28px;
+
+$h5-small: 18px;
+$h5-middle: 20px;
+$h5-large: 22px;
+
+$h6-small: 16px;
+$h6-middle: 18px;
+$h6-large: 20px;
+
+// heading
+$h1-font-sizes: (
+    phone-xs: $h1-small,
+    laptop: $h1-large,
+);
+
+$h2-font-sizes: (
+    phone-xs: $h2-small,
+    laptop: $h2-large,
+);
+
+$h3-font-sizes: (
+    phone-xs: $h3-large,
+    laptop: $h3-large,
+);
+
+$h4-font-sizes: (
+    phone-xs: $h4-small,
+    laptop: $h4-large,
+);
+
+$h5-font-sizes: (
+    phone-xs: $h5-small,
+    laptop: $h5-large,
+);
+
+$h6-font-sizes: (
+    phone-xs: 16px,
+    laptop: 20px,
+);

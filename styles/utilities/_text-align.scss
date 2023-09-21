@@ -1,0 +1,29 @@
+.ta-c {
+  text-align: center;
+}
+
+.ta-l {
+  text-align: left;
+}
+
+.ta-r {
+  text-align: right;
+}
+
+.ta-c-md {
+  @media (min-width: $tablet) {
+    text-align: center;
+  }
+}
+
+.ta-l-md {
+  @media (min-width: $tablet) {
+    text-align: left;
+  }
+}
+
+.ta-r-md {
+  @media (min-width: $tablet) {
+    text-align: right;
+  }
+}

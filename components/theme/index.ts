@@ -1,0 +1,11 @@
+export { default as Header } from './Header/Header';
+export { default as Footer } from './Footer/Footer';
+export * from './LessonCard';
+export * from './ReviewPerson';
+export * from './BlogPost';
+export * from './ScheduleLesson';
+export * from './RequirementCard';
+export * from './TeamEducatonCard';
+export * from './SocialList';
+export * from './Container';
+export * from './Button';

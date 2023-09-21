@@ -1,0 +1,110 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+//- HTML5 display-role reset for older browsers
+main,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+address,
+picture,
+section {
+    display: block;
+}
+
+body {
+    color: $base-text-color;
+    background: $base-background-body;
+    line-height: $line-height-base;
+    font-family: $font-family-base;
+    font-weight: $font-light;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-size: $font-size-base;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+p {
+    a {
+        &:not([class]) {
+            color: $link-color;
+
+            &:hover {
+                text-decoration: $link-hover-decoration;
+            }
+        }
+    }
+}
+
+a {
+    &[class] {
+        text-decoration: $link-decoration;
+    }
+
+    &:hover {
+        opacity: $hover-opacity-link;
+        text-decoration: $link-hover-decoration;
+    }
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.stop-transitions * {
+    transition: none !important;
+}
+
+address {
+    font-style: normal;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+button {
+    position: relative;
+    border: none;
+    font-size: $font-size-base;
+    cursor: pointer;
+    outline: none;
+}
