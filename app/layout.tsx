@@ -1,11 +1,5 @@
+import { Footer, Header } from '@/components/theme';
 import '../styles/main.scss';
-import type { Metadata } from 'next';
-import { Header, Footer } from '../components/theme';
-
-export const metadata: Metadata = {
-  title: 'App',
-  description: 'App description',
-};
 
 export default function RootLayout({
   children,

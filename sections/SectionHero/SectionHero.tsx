@@ -2,16 +2,24 @@ import Image from 'next/image';
 import { SectionHeroProps } from './SectionHero.type';
 import { Container, Button } from '@/components/theme';
 
-function SectionHero({ image, heading, subheading }: SectionHeroProps) {
+function SectionHero({
+  image,
+  heading,
+  subheading,
+  use_link_to_contact_page,
+  use_phone_cta,
+}: SectionHeroProps) {
   return (
     <section className="section-hero">
       <div className="section-hero__bg section-hero__bg--overlay">
-        <Image
-          {...image}
-          src={image.src}
-          alt={image.alt}
-          className="section-hero__bg-image"
-        />
+        {image ? (
+          <Image
+            {...image}
+            src={image.src}
+            alt={image.alt}
+            className="section-hero__bg-image"
+          />
+        ) : null}
       </div>
       <Container className="section-hero__container">
         <div className="section-hero__text-content ta-c text-light">
@@ -21,12 +29,16 @@ function SectionHero({ image, heading, subheading }: SectionHeroProps) {
           ) : null}
         </div>
         <div className="section-hero__action">
-          <Button href="/" className="section-hero__btn">
-            ЗАПИСАТЬСЯ НА КУРС
-          </Button>
-          <Button href="/" className="section-hero__btn" variant="secondary">
-            УЗНАТЬ БОЛЬШЕ О КУРСЕ
-          </Button>
+          {use_link_to_contact_page ? (
+            <Button href="/" className="section-hero__btn">
+              ЗАПИСАТЬСЯ НА КУРС
+            </Button>
+          ) : null}
+          {use_phone_cta ? (
+            <Button href="/" className="section-hero__btn" variant="secondary">
+              УЗНАТЬ БОЛЬШЕ О КУРСЕ
+            </Button>
+          ) : null}
         </div>
       </Container>
     </section>

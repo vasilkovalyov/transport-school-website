@@ -1,30 +1,49 @@
 import type { Metadata } from 'next';
 
-import {
-  SectionAboutCourse,
-  SectionAboutUs,
-  SectionAchivments,
-  SectionFaq,
-  SectionFormatLessons,
-  SectionHero,
-} from '@/sections';
+import PageServices from '@/services/home-service';
 
-export const metadata: Metadata = {
-  title: 'Home page',
-  description: 'page description',
+import { renderBlocks } from '@/sections/blocks';
+
+async function getData() {
+  const service = new PageServices();
+  const response = await service.getHome();
+  return response.data;
+}
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: `Home`,
+    description: 'Description',
+  };
 };
 
-export default function Home() {
+export default async function Home() {
+  const data = await getData();
+
   return (
     <>
-      <SectionHero
+      {data.body[0] !== null ? renderBlocks(data.body) : null}
+      {/* <SectionHero
         image={{
           src: '/images/hero-image-1.jpg',
           alt: 'hero image',
           fill: true,
         }}
-        heading="Обучение кархолинг-бизнесу в США"
-        subheading="Официальная школа кархолинга Business Transport School в США с программой подготовки водителей и и обучению всем тонкостям открытия кархолинг-бизнеса"
+        heading={data.body[0].heading}
+        subheading={data.body[0].subheading}
+        use_link_to_contact_page={data.body[0].use_link_to_contact_page}
+        use_phone_cta={data.body[0].use_phone_cta}
+      /> */}
+      {/* <SectionHero
+        image={{
+          src: '/images/hero-image-1.jpg',
+          alt: 'hero image',
+          fill: true,
+        }}
+        heading={data.heading}
+        subheading={data.subheading}
+        use_link_to_contact_page={data.use_link_to_contact_page}
+        use_phone_cta={data.use_phone_cta}
       />
       <SectionAboutUs
         heading="Кто мы?"
@@ -151,7 +170,7 @@ export default function Home() {
             text: `успешно организованных и процветающих компаний`,
           },
         ]}
-      />
+      /> */}
     </>
   );
 }
