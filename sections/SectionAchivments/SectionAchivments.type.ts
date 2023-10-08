@@ -1,7 +1,9 @@
+import { IBlockBaseInfo } from '../types';
+
 export type SectionAchivmentsProps = {
   heading: string;
-  subheading: string;
-  listAchivments: AchivmentProps[];
+  subheading?: string;
+  listAchivments?: AchivmentProps[];
 };
 
 export type AchivmentProps = {
@@ -9,3 +11,6 @@ export type AchivmentProps = {
   heading: string;
   text: string;
 };
+
+export type BlockAchivmentsFullDataType = SectionAchivmentsProps &
+  IBlockBaseInfo;

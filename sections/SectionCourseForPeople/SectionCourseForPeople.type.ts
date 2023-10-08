@@ -1,4 +1,9 @@
+import { IBlockBaseInfo } from '../types';
+
 export type SectionCourseForPeopleProps = {
   heading: string;
-  text: string;
+  rich_text?: string;
 };
+
+export type BlockCourseForPeopleFullDataType = SectionCourseForPeopleProps &
+  IBlockBaseInfo;

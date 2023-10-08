@@ -5,7 +5,7 @@ import { LessonCard, Container } from '@/components/theme';
 
 function SectionFormatLessons({
   heading,
-  subheading,
+  rich_text,
   lessons,
   themeColor = 'light',
 }: SectionFormatLessonsProps) {
@@ -17,10 +17,12 @@ function SectionFormatLessons({
       <Container className="section-format-lessons__container">
         <div className="section-format-lessons__heading-content ta-c">
           <h2 className="section-format-lessons__heading">{heading}</h2>
-          <p
-            className="section-format-lessons__subheading-text"
-            dangerouslySetInnerHTML={{ __html: subheading }}
-          />
+          {rich_text ? (
+            <p
+              className="section-format-lessons__subheading-text"
+              dangerouslySetInnerHTML={{ __html: rich_text }}
+            />
+          ) : null}
         </div>
         {lessons && lessons.length ? (
           <div className="education-cards-list">

@@ -1,9 +1,13 @@
 import { ImageProps } from 'next/image';
+import { IBlockBaseInfo } from '../types';
 
 export type SectionContactFormProps = {
   heading: string;
-  text: string;
-  formHeading: string;
-  requireMessage: string;
-  image: ImageProps;
+  image?: ImageProps;
+  rich_text?: string;
+  form_heading?: string;
+  require_message?: string;
 };
+
+export type BlockContactFormFullDataType = SectionContactFormProps &
+  IBlockBaseInfo;

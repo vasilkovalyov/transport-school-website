@@ -4,7 +4,7 @@ import { SectionCourseForPeopleProps } from './SectionCourseForPeople.type';
 
 function SectionCourseForPeople({
   heading,
-  text,
+  rich_text,
 }: SectionCourseForPeopleProps) {
   return (
     <section className="section-course-for-people">
@@ -18,10 +18,12 @@ function SectionCourseForPeople({
             height={931}
             className="section-course-for-people__decor-image"
           />
-          <div
-            className="section-course-for-people__text-content"
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
+          {rich_text ? (
+            <div
+              className="section-course-for-people__text-content"
+              dangerouslySetInnerHTML={{ __html: rich_text }}
+            />
+          ) : null}
         </div>
       </Container>
     </section>

@@ -10,9 +10,10 @@ function SectionScheduleLessons({
       <Container className="section-schedule-lessons__container">
         <h2 className="section-schedule-lessons__heading ta-c">{heading}</h2>
         <div className="section-schedule-lessons__body">
-          {listScheduleLessons.map((scheduleLesson) => (
-            <ScheduleLesson key={scheduleLesson._id} {...scheduleLesson} />
-          ))}
+          {listScheduleLessons &&
+            listScheduleLessons.map((scheduleLesson) => (
+              <ScheduleLesson key={scheduleLesson._id} {...scheduleLesson} />
+            ))}
         </div>
         <div
           className="section-schedule-lessons__action ta-c"

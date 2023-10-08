@@ -1,5 +1,5 @@
 import { ImageProps } from 'next/image';
-import { BlockEnum } from '../section-enum';
+import { IBlockBaseInfo } from '../types';
 
 export type SectionHeroProps = {
   image?: ImageProps;
@@ -9,9 +9,4 @@ export type SectionHeroProps = {
   use_phone_cta?: boolean;
 };
 
-export interface IBlockHero extends SectionHeroProps {
-  _id: string;
-  block_order: number;
-  block_page: string;
-  block_name: BlockEnum;
-}
+export type BlockHeroFullDataType = SectionHeroProps & IBlockBaseInfo;

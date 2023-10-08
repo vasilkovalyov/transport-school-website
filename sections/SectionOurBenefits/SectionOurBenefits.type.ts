@@ -1,7 +1,11 @@
 import { ImageProps } from 'next/image';
+import { IBlockBaseInfo } from '../types';
 
-export type SectionOurBenefits = {
-  image: ImageProps;
+export type SectionOurBenefitsProps = {
+  image?: ImageProps;
   heading: string;
-  listInfo: string[];
+  rich_text?: string;
 };
+
+export type BlockOurBenefitsFullDataType = SectionOurBenefitsProps &
+  IBlockBaseInfo;

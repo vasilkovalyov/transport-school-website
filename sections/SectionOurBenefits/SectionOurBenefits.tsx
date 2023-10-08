@@ -1,27 +1,29 @@
 import Image from 'next/image';
-import { SectionOurBenefits } from './SectionOurBenefits.type';
+import { SectionOurBenefitsProps } from './SectionOurBenefits.type';
 import { Container } from '@/components/theme';
 
-function SectionOurBenefits({ image, heading, listInfo }: SectionOurBenefits) {
+function SectionOurBenefits({
+  image,
+  heading,
+  rich_text,
+}: SectionOurBenefitsProps) {
   return (
     <section className="section-our-benefits">
       <div className="section-our-benefits__bg">
-        <Image
-          {...image}
-          src={image.src}
-          alt={image.alt}
-          className="section-our-benefits__bg-image"
-        />
+        {image ? (
+          <Image
+            {...image}
+            src={image.src}
+            alt={image.alt}
+            className="section-our-benefits__bg-image"
+          />
+        ) : null}
       </div>
       <Container className="section-our-benefits__container">
         <div className="section-our-benefits__body">
           <h2 className="section-our-benefits__heading">{heading}</h2>
-          {listInfo && listInfo.length ? (
-            <ul>
-              {listInfo.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
+          {rich_text ? (
+            <div dangerouslySetInnerHTML={{ __html: rich_text }} />
           ) : null}
         </div>
       </Container>

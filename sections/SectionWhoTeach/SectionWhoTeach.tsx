@@ -6,7 +6,7 @@ function SectionWhoTeach({
   image,
   heading,
   teacherName,
-  text,
+  rich_text,
 }: SectionWhoTeachProps) {
   return (
     <section className="section-who-teach">
@@ -17,11 +17,15 @@ function SectionWhoTeach({
             <h3 className="section-who-teach__teacher-name font-medium">
               {teacherName}
             </h3>
-            <div dangerouslySetInnerHTML={{ __html: text }} />
+            {rich_text ? (
+              <div dangerouslySetInnerHTML={{ __html: rich_text }} />
+            ) : null}
           </div>
-          <div className="section-who-teach__image">
-            <Image {...image} src={image.src} alt={image.alt} />
-          </div>
+          {image ? (
+            <div className="section-who-teach__image">
+              <Image {...image} src={image.src} alt={image.alt} />
+            </div>
+          ) : null}
         </div>
       </Container>
     </section>

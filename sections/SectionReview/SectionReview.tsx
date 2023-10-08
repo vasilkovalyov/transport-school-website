@@ -8,11 +8,12 @@ function SectionReview({ heading, listReviews }: SectionReviewProps) {
         <h2 className="section-review__heading ta-c">{heading}</h2>
         <div className="review-carousel swiper js-review-carousel">
           <div className="swiper-wrapper">
-            {listReviews.map((review) => (
-              <div key={review._id} className="swiper-slide">
-                <ReviewPerson {...review} />
-              </div>
-            ))}
+            {listReviews &&
+              listReviews.map((review) => (
+                <div key={review._id} className="swiper-slide">
+                  <ReviewPerson {...review} />
+                </div>
+              ))}
           </div>
           <div className="simple-slider__controls">
             <div className="container">

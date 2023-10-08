@@ -36,6 +36,7 @@ export const blockComponents: IRegistryItem = {
   [BlockEnum.BlockAboutUs]: SectionAboutUs,
   [BlockEnum.BlockScheduleLessons]: SectionScheduleLessons,
   [BlockEnum.BlockFormatLessons]: SectionFormatLessons,
+  [BlockEnum.BlockServices]: SectionFormatLessons,
   [BlockEnum.BlockFaq]: SectionFaq,
   [BlockEnum.BlockAchivments]: SectionAchivments,
   [BlockEnum.BlockBenefits]: SectionOurBenefits,
@@ -56,6 +57,7 @@ export const blockComponents: IRegistryItem = {
 
 export function renderBlocks(blocks: IPageBlocks) {
   return blocks.map((block) => {
+    if (!block) return null;
     const Component = blockComponents[block.block_name];
 
     return <Component key={block._id} {...block} />;

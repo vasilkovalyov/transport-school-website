@@ -1,3 +1,5 @@
+import { IBlockBaseInfo } from '../types';
+
 export type SectionStructEducationProps = {
   heading: string;
   listEducations: {
@@ -6,3 +8,6 @@ export type SectionStructEducationProps = {
     list: string[];
   }[];
 };
+
+export type BlockStructEducationFullDataType = SectionStructEducationProps &
+  IBlockBaseInfo;

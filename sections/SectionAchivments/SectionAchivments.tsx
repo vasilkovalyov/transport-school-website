@@ -12,9 +12,11 @@ function SectionAchivments({
       <Container>
         <div className="section-achivment__heading-content ta-c">
           <h2>{heading}</h2>
-          <p>
-            <i>{subheading}</i>
-          </p>
+          {subheading ? (
+            <p>
+              <i>{subheading}</i>
+            </p>
+          ) : null}
         </div>
         {listAchivments && listAchivments.length ? (
           <div className="section-achivment__body">
