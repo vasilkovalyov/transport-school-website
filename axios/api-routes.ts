@@ -8,3 +8,13 @@ export enum API_ROUTE {
   SCHEDULE_PAGE = 'page/schedule',
   CONTACTS = '/contacts',
 }
+
+export enum PAGE {
+  HOME = 'home',
+  ABOUT_COURSE = 'about-course',
+  BLOG = 'blog',
+  COMPANY = 'company',
+  CONTACT = 'contact',
+  PRICE = 'price',
+  SCHEDULE = 'schedule',
+}

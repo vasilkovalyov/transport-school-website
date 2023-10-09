@@ -52,5 +52,6 @@ export type IPageBlocks =
 
 export type ISeo = {
   title: string;
-  description: string;
+  description?: string;
+  keywords?: string;
 };
