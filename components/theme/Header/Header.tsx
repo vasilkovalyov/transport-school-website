@@ -4,8 +4,17 @@ import { MenuNavigation } from '../MenuNavigation';
 import { menu } from './Header.data';
 import { SocialList } from '..';
 import { Container } from '../Container';
+import ContactsService from '@/services/contacts-service';
 
-function Header() {
+async function getData() {
+  const service = new ContactsService();
+  const response = await service.getContacts();
+  return response.data;
+}
+
+async function Header() {
+  const data = await getData();
+
   return (
     <header className="header">
       <Container className="header__container">
@@ -19,28 +28,18 @@ function Header() {
         </Link>
         <MenuNavigation menu={menu} />
         <div className="header__contacts">
-          <Link
-            href="tel:+1 (347) 310-7483"
-            className="header__contacts-tel font-bold"
-          >
-            <span className="header__contacts-tel-icon icon-phone"></span>
-            <span className="header__contacts-tel-text">+1 (347) 310-7483</span>
-          </Link>
-          <SocialList
-            items={[
-              {
-                _id: '1',
-                name: 'instagram',
-                path: '/',
-              },
-              {
-                _id: '2',
-                name: 'whatsapp',
-                path: '/',
-              },
-            ]}
-            className="header__contacts-social"
-          />
+          {data.phone ? (
+            <Link href={data.phone} className="header__contacts-tel font-bold">
+              <span className="header__contacts-tel-icon icon-phone"></span>
+              <span className="header__contacts-tel-text">{data.phone}</span>
+            </Link>
+          ) : null}
+          {data.social_list ? (
+            <SocialList
+              items={[data.social_list[0], data.social_list[1]]}
+              className="header__contacts-social"
+            />
+          ) : null}
         </div>
         <button className="hamburger js-header-toggler" type="button">
           <span className="hamburger-box">

@@ -1,7 +1,7 @@
-import { Footer, Header } from '@/components/theme';
 import '../styles/main.scss';
+import { Footer, Header } from '@/components/theme';
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;

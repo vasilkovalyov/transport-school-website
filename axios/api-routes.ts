@@ -6,4 +6,5 @@ export enum API_ROUTE {
   CONTACT_PAGE = 'page/contact',
   PRICE_PAGE = 'page/price',
   SCHEDULE_PAGE = 'page/schedule',
+  CONTACTS = '/contacts',
 }

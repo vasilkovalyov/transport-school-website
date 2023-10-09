@@ -5,6 +5,6 @@ export type SocialListProps = {
 
 export type SocialLinkProps = {
   _id: string;
-  name: string;
-  path: string;
+  social_icon: string;
+  social_url: string;
 };

@@ -56,6 +56,7 @@ export const blockComponents: IRegistryItem = {
 };
 
 export function renderBlocks(blocks: IPageBlocks) {
+  if (!blocks.length) return [];
   return blocks.map((block) => {
     if (!block) return null;
     const Component = blockComponents[block.block_name];

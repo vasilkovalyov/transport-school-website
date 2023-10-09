@@ -1,10 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { menu } from './Footer.data';
-import { SocialList } from '..';
+import { SocialList } from '../SocialList';
 import { Container } from '../Container';
+import ContactsService from '@/services/contacts-service';
 
-function Footer() {
+async function getData() {
+  const service = new ContactsService();
+  const response = await service.getContacts();
+  return response.data;
+}
+
+async function Footer() {
+  const data = await getData();
+
   return (
     <footer className="footer">
       <Container className="footer__container">
@@ -34,49 +43,37 @@ function Footer() {
             </ul>
           </nav>
           <div className="footer__contacts">
-            <div className="footer__contacts-item">
-              <address className="footer__contacts-address font-medium text-white">
-                3524 SILVERSIDE RD STE 35B WILMINGTON DE 19810
-              </address>
-            </div>
-            <p className="footer__contacts-item">
-              <a
-                href="tel:+1 (347) 310-7483"
-                className="footer__contacts-link font-medium"
-              >
-                +1 (347) 310-7483
-              </a>
-            </p>
-            <p className="footer__contacts-item">
-              <a
-                href="mailto:transbuisschool.info@gmail.com"
-                className="footer__contacts-link font-medium"
-              >
-                transbuisschool.info@gmail.com
-              </a>
-            </p>
+            {data.address ? (
+              <div className="footer__contacts-item">
+                <address className="footer__contacts-address font-medium text-white">
+                  {data.address}
+                </address>
+              </div>
+            ) : null}
+            {data.phone ? (
+              <p className="footer__contacts-item">
+                <a
+                  href={`tel:${data.phone}`}
+                  className="footer__contacts-link font-medium"
+                >
+                  {data.phone}
+                </a>
+              </p>
+            ) : null}
+            {data.email ? (
+              <p className="footer__contacts-item">
+                <a
+                  href={`mailto:${data.email}`}
+                  className="footer__contacts-link font-medium"
+                >
+                  {data.email}
+                </a>
+              </p>
+            ) : null}
           </div>
         </div>
         <div className="footer__right">
-          <SocialList
-            items={[
-              {
-                _id: '1',
-                name: 'instagram',
-                path: '/',
-              },
-              {
-                _id: '2',
-                name: 'whatsapp',
-                path: '/',
-              },
-              {
-                _id: '3',
-                name: 'facebook',
-                path: '/',
-              },
-            ]}
-          />
+          {data.social_list ? <SocialList items={data.social_list} /> : null}
           <p>
             <Link href="#" className="footer__cta-link font-black">
               ЗАРЕГЕСТРИРОВАТЬСЯ НА ОБУЧЕНИЕ
