@@ -22,33 +22,29 @@ import {
 } from '@/sections';
 
 export interface IPage {
-  seo?: ISeo | null;
-  body: IPageBlocks;
+  body: IPageBlocks[];
 }
 
 export type IPageBlocks =
-  | [
-      BlockAboutCourseFullDataType,
-      BlockAboutFullDataType,
-      BlockAboutUsFullDataType,
-      BlockAchivmentsFullDataType,
-      BlockContactFormFullDataType,
-      BlockContactsFullDataType,
-      BlockCourseForPeopleFullDataType,
-      BlockCtaFullDataType,
-      BlockFaqDataType,
-      BlockFormatLessonsFullDataType,
-      BlockHeroFullDataType,
-      BlockOurBenefitsFullDataType,
-      BlockRelatedBlogFullDataType,
-      BlockRequirementFullDataType,
-      BlockReviewFullDataType,
-      BlockScheduleLessonsFullDataType,
-      BlockStructEducationFullDataType,
-      BlockTeamEducationFullDataType,
-      BlockWhoTeachFullInfoType
-    ]
-  | [];
+  | BlockAboutCourseFullDataType
+  | BlockAboutFullDataType
+  | BlockAboutUsFullDataType
+  | BlockAchivmentsFullDataType
+  | BlockContactFormFullDataType
+  | BlockContactsFullDataType
+  | BlockCourseForPeopleFullDataType
+  | BlockCtaFullDataType
+  | BlockFaqDataType
+  | BlockFormatLessonsFullDataType
+  | BlockHeroFullDataType
+  | BlockOurBenefitsFullDataType
+  | BlockRelatedBlogFullDataType
+  | BlockRequirementFullDataType
+  | BlockReviewFullDataType
+  | BlockScheduleLessonsFullDataType
+  | BlockStructEducationFullDataType
+  | BlockTeamEducationFullDataType
+  | BlockWhoTeachFullInfoType;
 
 export type ISeo = {
   title: string;

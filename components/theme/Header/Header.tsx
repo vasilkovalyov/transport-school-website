@@ -7,9 +7,18 @@ import { Container } from '../Container';
 import ContactsService from '@/services/contacts-service';
 
 async function getData() {
-  const service = new ContactsService();
-  const response = await service.getContacts();
-  return response.data;
+  try {
+    const service = new ContactsService();
+    const response = await service.getContacts();
+    return response.data;
+  } catch (e) {
+    return {
+      email: '',
+      address: '',
+      phone: '',
+      social_list: [],
+    };
+  }
 }
 
 async function Header() {
@@ -34,7 +43,7 @@ async function Header() {
               <span className="header__contacts-tel-text">{data.phone}</span>
             </Link>
           ) : null}
-          {data.social_list ? (
+          {data.social_list.length ? (
             <SocialList
               items={[data.social_list[0], data.social_list[1]]}
               className="header__contacts-social"

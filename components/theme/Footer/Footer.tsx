@@ -6,9 +6,18 @@ import { Container } from '../Container';
 import ContactsService from '@/services/contacts-service';
 
 async function getData() {
-  const service = new ContactsService();
-  const response = await service.getContacts();
-  return response.data;
+  try {
+    const service = new ContactsService();
+    const response = await service.getContacts();
+    return response.data;
+  } catch (e) {
+    return {
+      email: '',
+      address: '',
+      phone: '',
+      social_list: [],
+    };
+  }
 }
 
 async function Footer() {
@@ -73,7 +82,9 @@ async function Footer() {
           </div>
         </div>
         <div className="footer__right">
-          {data.social_list ? <SocialList items={data.social_list} /> : null}
+          {data.social_list.length ? (
+            <SocialList items={data.social_list} />
+          ) : null}
           <p>
             <Link href="#" className="footer__cta-link font-black">
               ЗАРЕГЕСТРИРОВАТЬСЯ НА ОБУЧЕНИЕ

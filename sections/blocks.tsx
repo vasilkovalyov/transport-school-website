@@ -55,7 +55,7 @@ export const blockComponents: IRegistryItem = {
   [BlockEnum.BlockRelatedPosts]: SectionRelatedPosts,
 };
 
-export function renderBlocks(blocks: IPageBlocks) {
+export function renderBlocks(blocks: IPageBlocks[]) {
   if (!blocks.length) return [];
   return blocks.map((block) => {
     if (!block) return null;

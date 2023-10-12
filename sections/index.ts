@@ -19,3 +19,4 @@ export * from './SectionRequirement';
 export * from './SectionReview';
 export * from './SectionContactForm';
 export * from './SectionRelatedPosts';
+export { default as SectionServerError } from './SectionServerError/SectionServerError';
