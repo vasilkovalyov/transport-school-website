@@ -3,8 +3,8 @@ import { IBlockBaseInfo } from '../types';
 
 export type SectionFaqProps = {
   heading: string;
-  image: ImageProps;
-  questions: FaqQuestionProps[];
+  image?: ImageProps;
+  list_faq?: FaqQuestionProps[];
 };
 
 export type FaqQuestionProps = {

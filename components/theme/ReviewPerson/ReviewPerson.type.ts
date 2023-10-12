@@ -2,8 +2,8 @@ import { ImageProps } from 'next/image';
 
 export type ReviewPersonProps = {
   _id: string;
-  image: ImageProps;
+  image?: ImageProps;
   text: string;
-  personName: string;
+  name: string;
   rating: number;
 };

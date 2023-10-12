@@ -3,7 +3,7 @@ import { IBlockBaseInfo } from '../types';
 export type SectionAchivmentsProps = {
   heading: string;
   subheading?: string;
-  listAchivments?: AchivmentProps[];
+  list_achivments?: AchivmentProps[];
 };
 
 export type AchivmentProps = {

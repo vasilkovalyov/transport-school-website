@@ -5,7 +5,7 @@ import { Container } from '@/components/theme';
 function SectionAchivments({
   heading,
   subheading,
-  listAchivments,
+  list_achivments,
 }: SectionAchivmentsProps) {
   return (
     <section className="section-achivment">
@@ -18,9 +18,9 @@ function SectionAchivments({
             </p>
           ) : null}
         </div>
-        {listAchivments && listAchivments.length ? (
+        {list_achivments && list_achivments.length ? (
           <div className="section-achivment__body">
-            {listAchivments.map((item, index) => (
+            {list_achivments.map((item, index) => (
               <div key={item._id} className="achivment ta-c">
                 <p
                   className={cn('achivment__heading font-bold', {

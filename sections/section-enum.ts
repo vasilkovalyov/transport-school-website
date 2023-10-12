@@ -1,6 +1,5 @@
 export enum BlockEnum {
   BlockHero = 'BlockHero',
-  BlockReviews = 'BlockReviews',
   BlockAboutCourse = 'BlockAboutCourse',
   BlockAboutUs = 'BlockAboutUs',
   BlockScheduleLessons = 'BlockScheduleLessons',

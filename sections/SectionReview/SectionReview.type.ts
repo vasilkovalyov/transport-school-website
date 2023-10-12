@@ -3,7 +3,7 @@ import { IBlockBaseInfo } from '../types';
 
 export type SectionReviewProps = {
   heading: string;
-  listReviews?: ReviewPersonProps[];
+  reviews?: ReviewPersonProps[];
 };
 
 export type BlockReviewFullDataType = SectionReviewProps & IBlockBaseInfo;
