@@ -26,7 +26,7 @@ function SectionBlog({
     const response = await api.get('posts', {
       params: {
         size: post_number,
-        page: currentPage,
+        page: nextPage,
       },
     });
 
@@ -43,7 +43,7 @@ function SectionBlog({
           <div className="blog-list">
             {postsData.map((post) => (
               <div key={post._id} className="blog-list__col">
-                <BlogPost {...post} slug={`${PAGE.BLOG}/${post._id}`} />
+                <BlogPost {...post} slug={`${PAGE.BLOG}/${post.slug}`} />
               </div>
             ))}
           </div>

@@ -1,12 +1,9 @@
 import { ImageProps } from 'next/image';
-import { IBlockBaseInfo } from '../types';
 
 export type SectionBlogInfoProps = {
   heading: string;
   date: string;
-  largeText: string;
-  text: string;
-  image: ImageProps;
+  short_description?: string;
+  rich_text?: string;
+  image?: ImageProps;
 };
-
-export type BlockBlogInfoFullDataType = SectionBlogInfoProps & IBlockBaseInfo;
