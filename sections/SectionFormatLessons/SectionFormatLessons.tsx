@@ -7,10 +7,10 @@ function SectionFormatLessons({
   heading,
   rich_text,
   services,
-  theme_color = 'light',
+  use_dark_theme,
 }: SectionFormatLessonsProps) {
   const themeColorCn = cn({
-    'section-format-lessons--light': theme_color === 'light',
+    'section-format-lessons--dark': use_dark_theme,
   });
   return (
     <section className={cn('section-format-lessons', themeColorCn)}>
