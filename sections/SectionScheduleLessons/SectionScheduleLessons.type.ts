@@ -1,9 +1,9 @@
 import { ScheduleLessonProps } from '@/components/theme';
 import { IBlockBaseInfo } from '../types';
+import { IUseLoadMore } from '@/hooks/useLoadMorePosts';
 
-export type SectionScheduleLessonsProps = {
+export type SectionScheduleLessonsProps = IUseLoadMore<ScheduleLessonProps> & {
   heading: string;
-  listScheduleLessons?: ScheduleLessonProps[];
 };
 
 export type BlockScheduleLessonsFullDataType = SectionScheduleLessonsProps &
