@@ -1,4 +1,4 @@
-.education-cards-list {
+.service-cards-list {
   @media (max-width: $tablet_lg_max) {
     max-width: 500px;
     width: 100%;
@@ -19,7 +19,7 @@
     }
 
     &:last-child {
-      .education-card {
+      .service-card {
         @media (max-width: $tablet_max) {
           margin-bottom: 0;
         }

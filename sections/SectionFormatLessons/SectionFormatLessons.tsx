@@ -1,16 +1,16 @@
 import cn from 'classnames';
 
 import { SectionFormatLessonsProps } from './SectionFormatLessons.type';
-import { LessonCard, Container } from '@/components/theme';
+import { ServiceCard, Container } from '@/components/theme';
 
 function SectionFormatLessons({
   heading,
   rich_text,
-  lessons,
-  themeColor = 'light',
+  services,
+  theme_color = 'light',
 }: SectionFormatLessonsProps) {
   const themeColorCn = cn({
-    'section-format-lessons--light': themeColor === 'light',
+    'section-format-lessons--light': theme_color === 'light',
   });
   return (
     <section className={cn('section-format-lessons', themeColorCn)}>
@@ -24,11 +24,11 @@ function SectionFormatLessons({
             />
           ) : null}
         </div>
-        {lessons && lessons.length ? (
-          <div className="education-cards-list">
-            {lessons.map((lesson) => (
-              <div className="education-cards-list__col" key={lesson._id}>
-                <LessonCard {...lesson} />
+        {services && services.length ? (
+          <div className="service-cards-list">
+            {services.map((service) => (
+              <div className="service-cards-list__col" key={service._id}>
+                <ServiceCard {...service} />
               </div>
             ))}
           </div>

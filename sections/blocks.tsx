@@ -35,7 +35,6 @@ export const blockComponents: IRegistryItem = {
   [BlockEnum.BlockAboutUs]: SectionAboutUs,
   [BlockEnum.BlockScheduleLessons]: SectionScheduleLessons,
   [BlockEnum.BlockFormatLessons]: SectionFormatLessons,
-  [BlockEnum.BlockServices]: SectionFormatLessons,
   [BlockEnum.BlockFaq]: SectionFaq,
   [BlockEnum.BlockAchivments]: SectionAchivments,
   [BlockEnum.BlockBenefits]: SectionOurBenefits,
@@ -63,5 +62,4 @@ export function renderBlocks(blocks: IPageBlocks[]) {
 
     return <Component key={block._id} {...block} />;
   });
-  return [];
 }

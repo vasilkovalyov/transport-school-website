@@ -1,4 +1,4 @@
-.education-card {
+.service-card {
   position: relative;
   background-color: $light;
   padding: 0 32px 36px;
@@ -31,6 +31,7 @@
 
   & &__body {
     position: relative;
+    padding-top: 20px;
     z-index: 1;
     &:only-child {
       padding-top: 30px;

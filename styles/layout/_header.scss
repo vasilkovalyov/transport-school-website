@@ -15,14 +15,12 @@
 
   & &__logo {
     margin-right: 20px;
+    max-width: 80px;
+    width: 100%;
 
-    @media (max-width: $tablet_max) {
-      max-width: 80px;
-      width: 100%;
-    }
-
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet_lg) {
       margin-right: 40px;
+      max-width: 124px;
     }
 
     @media (min-width: $header-breakpoint-mob) {

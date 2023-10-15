@@ -7,7 +7,6 @@ export enum BlockEnum {
   BlockFaq = 'BlockFaq',
   BlockAchivments = 'BlockAchivments',
   BlockBenefits = 'BlockBenefits',
-  BlockServices = 'BlockServices',
   BlockContactForm = 'BlockContactForm',
   BlockTeamEducation = 'BlockTeamEducation',
   BlockRequirement = 'BlockRequirement',

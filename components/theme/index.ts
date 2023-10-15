@@ -1,6 +1,6 @@
 export { default as Header } from './Header/Header';
 export { default as Footer } from './Footer/Footer';
-export * from './LessonCard';
+export * from './ServiceCard';
 export * from './ReviewPerson';
 export * from './BlogPost';
 export * from './ScheduleLesson';
