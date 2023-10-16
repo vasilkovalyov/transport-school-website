@@ -18,7 +18,7 @@ function SectionFormatLessons({
         <div className="section-format-lessons__heading-content ta-c">
           <h2 className="section-format-lessons__heading">{heading}</h2>
           {rich_text ? (
-            <p
+            <div
               className="section-format-lessons__subheading-text"
               dangerouslySetInnerHTML={{ __html: rich_text }}
             />

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BlogPostProps } from './BlogPost.type';
 
-function BlogPost({ slug, image, heading, text }: BlogPostProps) {
+function BlogPost({ slug, image, heading, short_description }: BlogPostProps) {
   return (
     <div className="blog base-shadow">
       {image ? (
@@ -16,7 +16,9 @@ function BlogPost({ slug, image, heading, text }: BlogPostProps) {
             {heading}
           </Link>
         </h6>
-        <p className="blog__text">{text}</p>
+        <p className="blog__text">
+          {short_description?.split(' ').splice(0, 16).join(' ')}...
+        </p>
         <Link href={slug} className="blog__link">
           читать далее
         </Link>

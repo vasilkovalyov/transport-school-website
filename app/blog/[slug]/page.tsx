@@ -33,7 +33,7 @@ export default async function Post(props: { params: { slug: string } }) {
     <>
       <SectionBlogInfo
         heading={post.heading}
-        date={post.date}
+        createdAt={post.createdAt}
         short_description={post.short_description}
         rich_text={post.rich_text}
       />

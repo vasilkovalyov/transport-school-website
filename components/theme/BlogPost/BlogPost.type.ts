@@ -4,6 +4,6 @@ export type BlogPostProps = {
   _id: string;
   image?: ImageProps;
   heading: string;
-  text?: string;
+  short_description?: string;
   slug: string;
 };

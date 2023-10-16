@@ -5,12 +5,12 @@ import monthes from '@/constants/month-names';
 
 function SectionBlogInfo({
   heading,
-  date,
+  createdAt,
   image,
   short_description,
   rich_text,
 }: SectionBlogInfoProps) {
-  const [year, month, day] = date.split('T')[0].split('-');
+  const [year, month, day] = createdAt.split('T')[0].split('-');
   return (
     <section className="section-article-info">
       <Container className="section-article-info__container">

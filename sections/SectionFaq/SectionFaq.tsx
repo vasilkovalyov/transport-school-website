@@ -14,7 +14,7 @@ function SectionFaq({ heading, image, list_faq }: SectionFaqProps) {
               list_faq.map((item) => (
                 <React.Fragment key={item._id}>
                   <h3>{item.heading}</h3>
-                  <div dangerouslySetInnerHTML={{ __html: item.text }}></div>
+                  <p>{item.text}</p>
                 </React.Fragment>
               ))}
           </div>
