@@ -111,6 +111,16 @@
         }
       }
     }
+
+    ul {
+      @include listreset;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
   }
 
   & &__course-heading {
@@ -118,15 +128,5 @@
     font-size: $font-size-xxxl;
     font-weight: $font-medium;
     margin-bottom: 30px;
-  }
-
-  & &__course-list {
-    @include listreset;
-  }
-
-  & &__course-list-item {
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
   }
 }

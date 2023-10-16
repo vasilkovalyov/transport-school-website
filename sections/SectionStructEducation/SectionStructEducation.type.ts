@@ -2,10 +2,10 @@ import { IBlockBaseInfo } from '../types';
 
 export type SectionStructEducationProps = {
   heading: string;
-  listEducations: {
+  struct_education_list: {
     _id: string;
     heading: string;
-    list: string[];
+    rich_text: string;
   }[];
 };
 

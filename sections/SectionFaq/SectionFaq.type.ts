@@ -10,7 +10,7 @@ export type SectionFaqProps = {
 export type FaqQuestionProps = {
   _id: string;
   heading: string;
-  text: string;
+  rich_text?: string;
 };
 
 export type BlockFaqDataType = SectionFaqProps & IBlockBaseInfo;
