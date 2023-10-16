@@ -6,7 +6,6 @@ function SectionCourseForPeople({
   heading,
   rich_text,
 }: SectionCourseForPeopleProps) {
-  console.log('rich_text', rich_text);
   return (
     <section className="section-course-for-people">
       <Container className="section-course-for-people__container">

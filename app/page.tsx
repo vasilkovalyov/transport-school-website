@@ -40,5 +40,5 @@ export default async function Home() {
     return <SectionServerError />;
   }
 
-  return <>{data.body[0] !== null ? renderBlocks(data.body) : null}</>;
+  return <>{data.body.length !== 0 ? renderBlocks(data.body) : null}</>;
 }
