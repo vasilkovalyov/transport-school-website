@@ -37,17 +37,26 @@ async function Header() {
         </Link>
         <MenuNavigation menu={menu} />
         <div className="header__contacts">
-          {data.phone ? (
-            <Link href={data.phone} className="header__contacts-tel font-bold">
-              <span className="header__contacts-tel-icon icon-phone"></span>
-              <span className="header__contacts-tel-text">{data.phone}</span>
-            </Link>
-          ) : null}
-          {data.social_list.length ? (
-            <SocialList
-              items={[data.social_list[0], data.social_list[1]]}
-              className="header__contacts-social"
-            />
+          {data ? (
+            <>
+              {data.phone ? (
+                <Link
+                  href={data.phone}
+                  className="header__contacts-tel font-bold"
+                >
+                  <span className="header__contacts-tel-icon icon-phone"></span>
+                  <span className="header__contacts-tel-text">
+                    {data.phone}
+                  </span>
+                </Link>
+              ) : null}
+              {data.social_list.length ? (
+                <SocialList
+                  items={[data.social_list[0], data.social_list[1]]}
+                  className="header__contacts-social"
+                />
+              ) : null}
+            </>
           ) : null}
         </div>
         <button className="hamburger js-header-toggler" type="button">

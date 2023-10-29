@@ -52,37 +52,41 @@ async function Footer() {
             </ul>
           </nav>
           <div className="footer__contacts">
-            {data.address ? (
-              <div className="footer__contacts-item">
-                <address className="footer__contacts-address font-medium text-white">
-                  {data.address}
-                </address>
-              </div>
-            ) : null}
-            {data.phone ? (
-              <p className="footer__contacts-item">
-                <a
-                  href={`tel:${data.phone}`}
-                  className="footer__contacts-link font-medium"
-                >
-                  {data.phone}
-                </a>
-              </p>
-            ) : null}
-            {data.email ? (
-              <p className="footer__contacts-item">
-                <a
-                  href={`mailto:${data.email}`}
-                  className="footer__contacts-link font-medium"
-                >
-                  {data.email}
-                </a>
-              </p>
+            {data ? (
+              <>
+                {data.address ? (
+                  <div className="footer__contacts-item">
+                    <address className="footer__contacts-address font-medium text-white">
+                      {data.address}
+                    </address>
+                  </div>
+                ) : null}
+                {data.phone ? (
+                  <p className="footer__contacts-item">
+                    <a
+                      href={`tel:${data.phone}`}
+                      className="footer__contacts-link font-medium"
+                    >
+                      {data.phone}
+                    </a>
+                  </p>
+                ) : null}
+                {data.email ? (
+                  <p className="footer__contacts-item">
+                    <a
+                      href={`mailto:${data.email}`}
+                      className="footer__contacts-link font-medium"
+                    >
+                      {data.email}
+                    </a>
+                  </p>
+                ) : null}
+              </>
             ) : null}
           </div>
         </div>
         <div className="footer__right">
-          {data.social_list.length ? (
+          {data && data.social_list.length ? (
             <SocialList items={data.social_list} />
           ) : null}
           <p>
