@@ -1,5 +1,5 @@
 import { ImageProps } from 'next/image';
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionHeroProps = {
   image?: ImageProps;
@@ -9,4 +9,4 @@ export type SectionHeroProps = {
   use_phone_cta?: boolean;
 };
 
-export type BlockHeroFullDataType = SectionHeroProps & IBlockBaseInfo;
+export type BlockHeroFullDataType = SectionHeroProps & BlockBaseInfoType;

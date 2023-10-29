@@ -1,10 +1,10 @@
 import api from '@/axios/api';
 import { API_ROUTE } from '@/axios/api-routes';
-import { ICommonContacts } from '@/types/common';
+import { CommonContactsType } from '@/types/common';
 import { AxiosPromise } from 'axios';
 
 class PageService {
-  async getContacts(): Promise<AxiosPromise<ICommonContacts>> {
+  async getContacts(): Promise<AxiosPromise<CommonContactsType>> {
     const response = await api.get(API_ROUTE.CONTACTS);
     return response;
   }

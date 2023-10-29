@@ -1,4 +1,4 @@
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionCourseForPeopleProps = {
   heading: string;
@@ -6,4 +6,4 @@ export type SectionCourseForPeopleProps = {
 };
 
 export type BlockCourseForPeopleFullDataType = SectionCourseForPeopleProps &
-  IBlockBaseInfo;
+  BlockBaseInfoType;

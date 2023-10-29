@@ -1,5 +1,5 @@
 import { TeamEducatonCardProps } from '@/components/theme';
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionTeamEducationProps = {
   heading: string;
@@ -8,4 +8,4 @@ export type SectionTeamEducationProps = {
 };
 
 export type BlockTeamEducationFullDataType = SectionTeamEducationProps &
-  IBlockBaseInfo;
+  BlockBaseInfoType;

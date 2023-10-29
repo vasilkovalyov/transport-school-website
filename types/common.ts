@@ -2,14 +2,14 @@ import { SocialLinkProps } from '@/components/theme';
 
 export type ThemeColorType = 'light' | 'dark';
 
-export interface ICommonContacts extends IContacts, ISocialNetworks {}
+export type CommonContactsType = ContactsType & SocialNetworksType;
 
-export interface IContacts {
+export type ContactsType = {
   email: string;
   address: string;
   phone: string;
-}
+};
 
-export interface ISocialNetworks {
+export type SocialNetworksType = {
   social_list: SocialLinkProps[];
-}
+};

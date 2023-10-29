@@ -1,9 +1,9 @@
 import { BlogPostProps } from '@/components/theme';
-import { IBlockBaseInfo } from '../types';
-import { IUseLoadMore } from '@/hooks/useLoadMorePosts';
+import { BlockBaseInfoType } from '../types';
+import { UseLoadMoreProps } from '@/hooks/useLoadMorePosts';
 
-export type SectionBlogProps = IUseLoadMore<BlogPostProps> & {
+export type SectionBlogProps = UseLoadMoreProps<BlogPostProps> & {
   heading: string;
 };
 
-export type BlockBlogFullDataType = SectionBlogProps & IBlockBaseInfo;
+export type BlockBlogFullDataType = SectionBlogProps & BlockBaseInfoType;

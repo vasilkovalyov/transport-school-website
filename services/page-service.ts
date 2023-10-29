@@ -1,10 +1,10 @@
 import api from '@/axios/api';
 import { API_ROUTE, PAGE } from '@/axios/api-routes';
-import { IPage, ISeo } from '@/types/page';
+import { PageType, ISeo } from '@/types/page';
 import { AxiosPromise } from 'axios';
 
 class PageService {
-  async getPage(pageName: API_ROUTE): Promise<AxiosPromise<IPage>> {
+  async getPage(pageName: API_ROUTE): Promise<AxiosPromise<PageType>> {
     const response = await api.get(pageName);
     return response;
   }

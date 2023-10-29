@@ -1,18 +1,18 @@
 import api from '@/axios/api';
 import { useState, useEffect } from 'react';
 
-export interface IUseLoadMore<T> {
+export type UseLoadMoreProps<T> = {
   posts?: T[];
   next_page?: number | null;
   post_number?: number | null;
-}
+};
 
 export function useLoadMorePosts<T>({
   posts,
   post_number,
   next_page,
   apiUrl,
-}: IUseLoadMore<T> & {
+}: UseLoadMoreProps<T> & {
   apiUrl: string;
 }) {
   const [loading, setLoading] = useState<boolean>(false);

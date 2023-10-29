@@ -1,4 +1,4 @@
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionCtaProps = {
   heading: string;
@@ -7,4 +7,4 @@ export type SectionCtaProps = {
   phone?: string;
 };
 
-export type BlockCtaFullDataType = SectionCtaProps & IBlockBaseInfo;
+export type BlockCtaFullDataType = SectionCtaProps & BlockBaseInfoType;

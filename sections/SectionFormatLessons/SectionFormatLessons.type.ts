@@ -1,5 +1,5 @@
 import { ServiceCardProps } from '@/components/theme/ServiceCard/ServiceCard.type';
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionFormatLessonsProps = {
   heading: string;
@@ -9,4 +9,4 @@ export type SectionFormatLessonsProps = {
 };
 
 export type BlockFormatLessonsFullDataType = SectionFormatLessonsProps &
-  IBlockBaseInfo;
+  BlockBaseInfoType;

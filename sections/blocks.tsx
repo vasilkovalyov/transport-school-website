@@ -22,7 +22,7 @@ import {
   SectionTeamEducation,
   SectionWhoTeach,
 } from '.';
-import { IPageBlocks } from '@/types/page';
+import { PageBlocksType } from '@/types/page';
 
 type IRegistryItem = {
   [key in BlockEnum | string]: React.FunctionComponent | object | any;
@@ -53,7 +53,7 @@ export const blockComponents: IRegistryItem = {
   [BlockEnum.BlockRelatedPosts]: SectionRelatedPosts,
 };
 
-export function renderBlocks(blocks: IPageBlocks[]) {
+export function renderBlocks(blocks: PageBlocksType[]) {
   if (!blocks.length) return [];
   return blocks.map((block) => {
     if (!block) return null;

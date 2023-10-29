@@ -1,4 +1,3 @@
-import { SocialLinkProps } from '@/components/theme';
 import {
   BlockAboutCourseFullDataType,
   BlockAboutFullDataType,
@@ -21,11 +20,11 @@ import {
   BlockWhoTeachFullInfoType,
 } from '@/sections';
 
-export interface IPage {
-  body: IPageBlocks[];
-}
+export type PageType = {
+  body: PageBlocksType[];
+};
 
-export type IPageBlocks =
+export type PageBlocksType =
   | BlockAboutCourseFullDataType
   | BlockAboutFullDataType
   | BlockAboutUsFullDataType

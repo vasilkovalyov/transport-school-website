@@ -1,4 +1,4 @@
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionContactsProps = {
   heading: string;
@@ -7,4 +7,5 @@ export type SectionContactsProps = {
   phone: string;
 };
 
-export type BlockContactsFullDataType = SectionContactsProps & IBlockBaseInfo;
+export type BlockContactsFullDataType = SectionContactsProps &
+  BlockBaseInfoType;

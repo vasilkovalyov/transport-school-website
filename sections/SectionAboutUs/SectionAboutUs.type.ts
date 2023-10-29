@@ -1,5 +1,5 @@
 import { ImageProps } from 'next/image';
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionAboutUsProps = {
   image?: ImageProps;
@@ -7,4 +7,4 @@ export type SectionAboutUsProps = {
   rich_text?: string;
 };
 
-export type BlockAboutUsFullDataType = SectionAboutUsProps & IBlockBaseInfo;
+export type BlockAboutUsFullDataType = SectionAboutUsProps & BlockBaseInfoType;

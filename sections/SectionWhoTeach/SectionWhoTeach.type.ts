@@ -1,5 +1,5 @@
 import { ImageProps } from 'next/image';
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionWhoTeachProps = {
   image?: ImageProps;
@@ -8,4 +8,5 @@ export type SectionWhoTeachProps = {
   rich_text?: string;
 };
 
-export type BlockWhoTeachFullInfoType = SectionWhoTeachProps & IBlockBaseInfo;
+export type BlockWhoTeachFullInfoType = SectionWhoTeachProps &
+  BlockBaseInfoType;

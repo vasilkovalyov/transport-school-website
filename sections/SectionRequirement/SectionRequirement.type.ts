@@ -1,5 +1,5 @@
 import { RequirementCardProps } from '@/components/theme';
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionRequirementProps = {
   heading: string;
@@ -7,4 +7,4 @@ export type SectionRequirementProps = {
 };
 
 export type BlockRequirementFullDataType = SectionRequirementProps &
-  IBlockBaseInfo;
+  BlockBaseInfoType;

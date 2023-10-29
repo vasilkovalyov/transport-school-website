@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { SectionRelatedPosts, SectionCta } from '@/sections';
 import SectionBlogInfo from '@/sections/SectionBlogInfo/SectionBlogInfo';
 import api from '@/axios/api';
-import { IPageSingleBlog } from './page.type';
+import { PageSingleBlogType } from './page.type';
 import { AxiosResponse } from 'axios';
 
 async function getData(
   slug: string
-): Promise<AxiosResponse<IPageSingleBlog> | null> {
+): Promise<AxiosResponse<PageSingleBlogType> | null> {
   try {
     const response = await api.get(`page/blog/${slug}`);
     return response;

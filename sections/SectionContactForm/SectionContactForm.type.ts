@@ -1,5 +1,5 @@
 import { ImageProps } from 'next/image';
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionContactFormProps = {
   heading: string;
@@ -10,4 +10,4 @@ export type SectionContactFormProps = {
 };
 
 export type BlockContactFormFullDataType = SectionContactFormProps &
-  IBlockBaseInfo;
+  BlockBaseInfoType;

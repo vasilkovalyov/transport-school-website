@@ -1,4 +1,4 @@
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionAchivmentsProps = {
   heading: string;
@@ -13,4 +13,4 @@ export type AchivmentProps = {
 };
 
 export type BlockAchivmentsFullDataType = SectionAchivmentsProps &
-  IBlockBaseInfo;
+  BlockBaseInfoType;

@@ -1,5 +1,5 @@
 import { BlogPostProps } from '@/components/theme';
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionRelatedBlogProps = {
   heading: string;
@@ -7,4 +7,4 @@ export type SectionRelatedBlogProps = {
 };
 
 export type BlockRelatedBlogFullDataType = SectionRelatedBlogProps &
-  IBlockBaseInfo;
+  BlockBaseInfoType;

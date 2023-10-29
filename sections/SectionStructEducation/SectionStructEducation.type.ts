@@ -1,4 +1,4 @@
-import { IBlockBaseInfo } from '../types';
+import { BlockBaseInfoType } from '../types';
 
 export type SectionStructEducationProps = {
   heading: string;
@@ -10,4 +10,4 @@ export type SectionStructEducationProps = {
 };
 
 export type BlockStructEducationFullDataType = SectionStructEducationProps &
-  IBlockBaseInfo;
+  BlockBaseInfoType;
