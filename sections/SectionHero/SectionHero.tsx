@@ -14,9 +14,9 @@ function SectionHero({
       <div className="section-hero__bg section-hero__bg--overlay">
         {image ? (
           <Image
-            {...image}
-            src={image.src}
-            alt={image.alt}
+            src={image}
+            alt={heading}
+            fill
             className="section-hero__bg-image"
           />
         ) : null}

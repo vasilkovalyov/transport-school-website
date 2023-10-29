@@ -1,8 +1,7 @@
-import { ImageProps } from 'next/image';
 import { BlockBaseInfoType } from '../types';
 
 export type SectionHeroProps = {
-  image?: ImageProps;
+  image?: string;
   heading: string;
   subheading?: string;
   use_link_to_contact_page?: boolean;
