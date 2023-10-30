@@ -4,7 +4,7 @@ function TeamEducatonCard({ heading, type, discount }: TeamEducatonCardProps) {
   return (
     <div className="team-education-card ta-c">
       <h5
-        className="team-education-card__type font-bold"
+        className="team-education-card__type"
         dangerouslySetInnerHTML={{ __html: type }}
       />
       <div className="team-education-card__body base-shadow">

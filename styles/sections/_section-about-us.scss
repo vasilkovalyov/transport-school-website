@@ -39,15 +39,19 @@
       display: none;
     }
 
-    @media (max-width: $widescreen_max) {
-      max-width: 60%;
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+    }
+
+    @media (min-width: $tablet_lg) {
+      max-width: 40%;
       width: 100%;
       margin: 0 auto;
     }
 
-    @media (min-width: $tablet) {
-      display: flex;
-      align-items: center;
+    @media (min-width: $laptop_md) {
+      max-width: 60%;
     }
 
     @media (min-width: $widescreen) {

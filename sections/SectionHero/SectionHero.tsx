@@ -16,6 +16,7 @@ function SectionHero({
           <Image
             src={image}
             alt={heading}
+            priority
             fill
             className="section-hero__bg-image"
           />

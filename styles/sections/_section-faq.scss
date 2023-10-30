@@ -71,10 +71,20 @@
   }
 
   & &__image {
-    @media (max-width: $widescreen_max) {
-      max-width: 60%;
+    @media (max-width: $tablet_max) {
+      display: none;
+    }
+
+    @media (min-width: $tablet) {
+      max-width: 40%;
       width: 100%;
       margin: 0 auto;
+    }
+
+    @media (min-width: $laptop_md) {
+      max-width: 60%;
+      position: relative;
+      top: -30px;
     }
 
     @media (min-width: $widescreen) {

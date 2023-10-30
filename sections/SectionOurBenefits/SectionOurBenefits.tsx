@@ -14,6 +14,7 @@ function SectionOurBenefits({
           <Image
             src={image}
             alt={heading}
+            priority
             fill
             className="section-our-benefits__bg-image"
           />

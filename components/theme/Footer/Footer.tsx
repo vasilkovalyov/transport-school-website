@@ -31,8 +31,9 @@ async function Footer() {
             <Image
               src="/images/logo-footer.png"
               alt="tbs"
-              width={190}
-              height={68}
+              width={0}
+              height={0}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         </div>

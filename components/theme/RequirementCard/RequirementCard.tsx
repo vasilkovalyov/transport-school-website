@@ -6,13 +6,7 @@ function RequirementCard({ image, heading, text }: RequirementCardProps) {
     <div className="requirement-card ta-c base-shadow">
       {image ? (
         <div className="requirement-card__image">
-          <Image
-            {...image}
-            src={image.src}
-            alt={image.alt}
-            width={70}
-            height={70}
-          />
+          <Image src={image} alt={heading} priority width={70} height={70} />
         </div>
       ) : null}
       <h5 className="requirement-card__heading font-light">{heading}</h5>

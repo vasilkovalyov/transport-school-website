@@ -13,7 +13,14 @@ function ServiceCard({
     <div className="service-card base-shadow ta-c">
       {image ? (
         <div className="service-card__image">
-          <Image src={image} alt={heading} width={190} height={190} />
+          <Image
+            src={image}
+            alt={heading}
+            priority
+            width={0}
+            height={0}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
       ) : null}
       <div className="service-card__body">

@@ -31,8 +31,9 @@ async function Header() {
           <Image
             src="/images/logo-header.png"
             alt="logo"
-            width={125}
-            height={45}
+            width={0}
+            height={0}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </Link>
         <MenuNavigation menu={menu} />

@@ -46,9 +46,7 @@
 
   & &__image {
     @media (max-width: $tablet_max) {
-      max-width: 30%;
-      width: 100%;
-      margin: 0 auto;
+      display: none;
     }
 
     @media (min-width: $tablet) {
