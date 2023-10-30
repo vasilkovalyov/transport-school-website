@@ -6,6 +6,7 @@ function SectionContacts({
   address,
   email,
   phone,
+  map_url,
 }: SectionContactsProps) {
   return (
     <section className="section-contact">
@@ -22,15 +23,17 @@ function SectionContacts({
             </a>
           </div>
         </div>
-        <div className="section-contact__image-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.960782163635!2d-75.54706202355773!3d39.807871492470845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6fb58dc83cfed%3A0x299e91ccc31af45e!2zMzUyNCBTaWx2ZXJzaWRlIFJkICMzNWIsIFdpbG1pbmd0b24sIERFIDE5ODEwLCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2sua!4v1693415676780!5m2!1suk!2sua"
-            style={{ border: 0 }}
-            allowFullScreen={false}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+        {map_url ? (
+          <div className="section-contact__image-map">
+            <iframe
+              src={map_url}
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        ) : null}
       </Container>
     </section>
   );

@@ -177,7 +177,6 @@
           padding-top: 10px;
           padding-bottom: 10px;
           margin-top: 20px;
-          display: none;
         }
 
         @media (min-width: $header-breakpoint-mob) {
@@ -225,6 +224,7 @@
     @media (min-width: $header-breakpoint-mob) {
       flex-direction: row-reverse;
       margin-left: 40px;
+      min-width: 220px;
     }
   }
 

@@ -1,29 +1,41 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MenuNavigation } from '../MenuNavigation';
 import { menu } from './Header.data';
-import { SocialList } from '..';
 import { Container } from '../Container';
+import HeaderContacts from '../HeaderContacts/HeaderContacts';
+import { CommonContactsType } from '@/types/common';
+
 import ContactsService from '@/services/contacts-service';
 
-async function getData() {
-  try {
-    const service = new ContactsService();
+const service = new ContactsService();
+
+const navActiveCn = 'nav-active';
+
+function Header() {
+  const [contacts, setContacts] = useState<CommonContactsType | null>(null);
+  const [activeMenu, setActiveMenu] = useState<boolean>(false);
+
+  async function loadContacts() {
     const response = await service.getContacts();
-    return response.data;
-  } catch (e) {
-    return {
-      email: '',
-      address: '',
-      phone: '',
-      social_list: [],
-    };
+    setContacts(response.data);
   }
-}
 
-async function Header() {
-  const data = await getData();
+  useEffect(() => {
+    loadContacts();
+  }, []);
 
+  useEffect(() => {
+    if (activeMenu) {
+      document.body.classList.add(navActiveCn);
+    } else {
+      document.body.classList.remove(navActiveCn);
+    }
+  }, [activeMenu]);
   return (
     <header className="header">
       <Container className="header__container">
@@ -38,29 +50,13 @@ async function Header() {
         </Link>
         <MenuNavigation menu={menu} />
         <div className="header__contacts">
-          {data ? (
-            <>
-              {data.phone ? (
-                <Link
-                  href={data.phone}
-                  className="header__contacts-tel font-bold"
-                >
-                  <span className="header__contacts-tel-icon icon-phone"></span>
-                  <span className="header__contacts-tel-text">
-                    {data.phone}
-                  </span>
-                </Link>
-              ) : null}
-              {data.social_list.length ? (
-                <SocialList
-                  items={[data.social_list[0], data.social_list[1]]}
-                  className="header__contacts-social"
-                />
-              ) : null}
-            </>
-          ) : null}
+          {contacts ? <HeaderContacts {...contacts} /> : null}
         </div>
-        <button className="hamburger js-header-toggler" type="button">
+        <button
+          className={cn('hamburger', { active: activeMenu })}
+          type="button"
+          onClick={() => setActiveMenu(!activeMenu)}
+        >
           <span className="hamburger-box">
             <span className="hamburger-inner"></span>
           </span>

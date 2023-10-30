@@ -5,6 +5,7 @@ export type SectionContactsProps = {
   email: string;
   address: string;
   phone: string;
+  map_url?: string;
 };
 
 export type BlockContactsFullDataType = SectionContactsProps &
