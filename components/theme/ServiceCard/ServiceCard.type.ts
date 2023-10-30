@@ -1,8 +1,6 @@
-import { ImageProps } from 'next/image';
-
 export type ServiceCardProps = {
   _id: string;
-  image?: ImageProps;
+  image?: string;
   heading: string;
   price: number;
   top_list_info: {
