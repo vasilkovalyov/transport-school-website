@@ -22,7 +22,7 @@ function SectionFaq({ heading, image, list_faq }: SectionFaqProps) {
           </div>
           {image ? (
             <div className="section-faq__image">
-              <Image {...image} src={image.src} alt={image.alt} />
+              <Image src={image} alt={heading} width={450} height={540} />
             </div>
           ) : null}
         </div>

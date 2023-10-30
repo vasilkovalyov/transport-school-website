@@ -17,7 +17,7 @@ function SectionAboutUs({ image, heading, rich_text }: SectionAboutUsProps) {
         </div>
         {image ? (
           <div className="section-about-us__image">
-            <Image {...image} src={image.src} alt={image.alt} />
+            <Image src={image} alt={heading} width={700} height={600} />
           </div>
         ) : null}
       </Container>

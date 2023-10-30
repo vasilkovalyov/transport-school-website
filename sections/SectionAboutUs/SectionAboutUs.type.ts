@@ -1,8 +1,7 @@
-import { ImageProps } from 'next/image';
 import { BlockBaseInfoType } from '../types';
 
 export type SectionAboutUsProps = {
-  image?: ImageProps;
+  image?: string;
   heading: string;
   rich_text?: string;
 };
