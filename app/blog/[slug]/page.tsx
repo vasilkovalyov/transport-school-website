@@ -36,6 +36,7 @@ export default async function Post(props: { params: { slug: string } }) {
         createdAt={post.createdAt}
         short_description={post.short_description}
         rich_text={post.rich_text}
+        image={post.image}
       />
       {blockRelatedPosts && blockRelatedPosts?.posts.length ? (
         <SectionRelatedPosts

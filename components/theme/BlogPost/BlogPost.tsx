@@ -7,7 +7,7 @@ function BlogPost({ slug, image, heading, short_description }: BlogPostProps) {
     <div className="blog base-shadow">
       {image ? (
         <div className="blog__image">
-          <Image {...image} src={image.src} alt={image.alt} />
+          <Image src={image} alt={heading} fill />
         </div>
       ) : null}
       <div className="blog__body">

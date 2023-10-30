@@ -20,13 +20,7 @@ function SectionBlogInfo({
         </p>
         {image ? (
           <div className="section-article-info__image">
-            <Image
-              {...image}
-              src={image.src}
-              alt={image.alt}
-              width={840}
-              height={640}
-            />
+            <Image src={image} alt={heading} width={840} height={640} />
           </div>
         ) : null}
         <p className="section-article-info__large-text">{short_description}</p>

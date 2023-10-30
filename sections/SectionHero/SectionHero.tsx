@@ -35,7 +35,11 @@ function SectionHero({
             </Button>
           ) : null}
           {use_phone_cta ? (
-            <Button href="/" className="section-hero__btn" variant="secondary">
+            <Button
+              href="/about-course"
+              className="section-hero__btn"
+              variant="secondary"
+            >
               УЗНАТЬ БОЛЬШЕ О КУРСЕ
             </Button>
           ) : null}

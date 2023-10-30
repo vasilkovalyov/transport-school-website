@@ -15,11 +15,16 @@
     background-color: $black;
   }
 
+  &.section-format-lessons--dark &__heading-content {
+    color: $light;
+    background-color: $black;
+  }
+
   & &__heading-content {
     max-width: 586px;
     width: 100%;
     margin: 0 auto 26px;
-    color: $light;
+    color: $black;
 
     @media (min-width: $tablet) {
       margin: 0 auto 80px;

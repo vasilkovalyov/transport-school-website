@@ -26,7 +26,7 @@ function SectionTeamEducation({
               ))}
             </div>
             <div className="section-team-education__action">
-              <Button href="/">ЗАПИСАТЬСЯ КОМАНДОЙ</Button>
+              <Button href="/contact">ЗАПИСАТЬСЯ КОМАНДОЙ</Button>
             </div>
           </>
         ) : null}

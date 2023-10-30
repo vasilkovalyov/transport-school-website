@@ -25,13 +25,7 @@ function SectionContactForm({
           </div>
           {image ? (
             <div className="section-contact-form__image">
-              <Image
-                {...image}
-                src={image.src}
-                alt={image.alt}
-                width={500}
-                height={500}
-              />
+              <Image src={image} alt={heading} width={500} height={500} />
             </div>
           ) : null}
           {require_message ? (

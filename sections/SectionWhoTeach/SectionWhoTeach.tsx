@@ -23,7 +23,7 @@ function SectionWhoTeach({
           </div>
           {image ? (
             <div className="section-who-teach__image">
-              <Image {...image} src={image.src} alt={image.alt} />
+              <Image src={image} alt={heading} width={316} height={630} />
             </div>
           ) : null}
         </div>

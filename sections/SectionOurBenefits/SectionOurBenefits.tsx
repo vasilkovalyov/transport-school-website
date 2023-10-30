@@ -12,9 +12,9 @@ function SectionOurBenefits({
       <div className="section-our-benefits__bg">
         {image ? (
           <Image
-            {...image}
-            src={image.src}
-            alt={image.alt}
+            src={image}
+            alt={heading}
+            fill
             className="section-our-benefits__bg-image"
           />
         ) : null}

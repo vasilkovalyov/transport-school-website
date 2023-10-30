@@ -63,7 +63,7 @@ function ScheduleLesson({
         </div>
       </div>
       <div className="schedule-lesson__action">
-        <Button href="#">ЗАПИСАТЬСЯ</Button>
+        <Button href="/contact">ЗАПИСАТЬСЯ</Button>
       </div>
     </div>
   );
