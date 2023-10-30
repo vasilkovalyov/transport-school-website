@@ -13,7 +13,7 @@ function SectionCta({
         <h2 className="section-cta-questions__heading">{heading}</h2>
         <div className="section-cta-questions__action">
           {use_link_to_contact_page ? (
-            <Button href="/" className="section-cta-questions__btn">
+            <Button href="/contact" className="section-cta-questions__btn">
               ЗАПИСАТЬСЯ НА КУРС
             </Button>
           ) : null}

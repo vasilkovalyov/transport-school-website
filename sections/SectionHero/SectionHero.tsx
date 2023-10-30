@@ -30,7 +30,7 @@ function SectionHero({
         </div>
         <div className="section-hero__action">
           {use_link_to_contact_page ? (
-            <Button href="/" className="section-hero__btn">
+            <Button href="/contact" className="section-hero__btn">
               ЗАПИСАТЬСЯ НА КУРС
             </Button>
           ) : null}
