@@ -14,16 +14,26 @@ const getLastsDayToEvent = (startDate: string): number => {
 function ScheduleLesson({
   heading,
   date_start_event,
-  day_end,
-  day_start,
+  days,
   time_end,
   time_start,
   type_group,
   type_lesson,
-  current_count_persons,
-  total_count_persons,
+  students = 0,
+  max_people,
 }: ScheduleLessonProps) {
   const [year, month, day] = date_start_event.split('-');
+
+  const getDays = (days: number[]) => {
+    if (days.length === 2) {
+      return `${shortDayNames[days[0]].name} - ${shortDayNames[days[1]].name}`;
+    }
+    let daysStr = '';
+    days.forEach((day) => {
+      daysStr += shortDayNames[day].name + ', ';
+    });
+    return daysStr;
+  };
 
   return (
     <div className="schedule-lesson">
@@ -36,18 +46,15 @@ function ScheduleLesson({
             </p>
             <ul className="schedule-lesson__list-info">
               <li>{lessonType[type_lesson]}</li>
-              <li>
-                {shortDayNames[parseInt(day_start)].name}-
-                {shortDayNames[parseInt(day_end)].name}
-              </li>
+              <li>{getDays(days)}</li>
               <li>
                 {time_start} - {time_end}
               </li>
             </ul>
-            {total_count_persons ? (
+            {max_people ? (
               <p className="schedule-lesson__registration-count">
                 <strong>
-                  Занято мест: {current_count_persons}/{total_count_persons}
+                  Занято мест: {students} / {max_people}
                 </strong>
               </p>
             ) : null}

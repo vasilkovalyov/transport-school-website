@@ -3,12 +3,11 @@ export type ScheduleLessonProps = {
   heading: string;
   type_group: string;
   type_lesson: string;
-  day_start: string;
-  day_end: string;
+  days: number[];
   time_start: string;
   time_end: string;
   date_start_event: string;
   createdAt: string;
-  current_count_persons: number;
-  total_count_persons: number;
+  students: number;
+  max_people: number;
 };
