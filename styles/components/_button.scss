@@ -11,10 +11,15 @@ button {
   color: $dark;
   font-size: $font-size-sm;
   background-color: $primary;
+  transition: opacity 0.3s linear;
 
   @media (min-width: $laptop) {
     font-size: $font-size-md;
     padding: 18px 48px;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 
   &::before {
@@ -27,5 +32,35 @@ button {
 
   &.btn--secondary {
     background-color: $light;
+  }
+
+  &.btn--loading {
+    pointer-events: none;
+    opacity: 0.7;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 30%;
+      right: 10px;
+      width: 18px;
+      height: 18px;
+      border: 2px solid $black;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+      margin-left: 6px;
+    }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

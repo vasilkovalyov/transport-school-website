@@ -1,0 +1,39 @@
+.cta-form {
+  max-width: 360px;
+  width: 100%;
+}
+
+.input-box {
+  margin-bottom: 30px;
+
+  & &__label {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-light;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  & &__select,
+  & &__input {
+    width: 100%;
+    height: 42px;
+    padding: 10px;
+    border: 1px solid $black;
+
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-light;
+  }
+
+  & &__select--error,
+  & &__input--error {
+    border-color: $red;
+  }
+
+  & &__error-message {
+    font-size: 14px;
+    color: $red;
+    margin-top: 4px;
+  }
+}

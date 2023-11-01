@@ -9,3 +9,4 @@ export * from './TeamEducatonCard';
 export * from './SocialList';
 export * from './Container';
 export * from './Button';
+export { default as CtaForm } from './CtaForm/CtaForm';

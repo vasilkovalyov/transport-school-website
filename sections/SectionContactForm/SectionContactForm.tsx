@@ -1,4 +1,4 @@
-import { Container } from '@/components/theme';
+import { Container, CtaForm } from '@/components/theme';
 import { SectionContactFormProps } from './SectionContactForm.type';
 import Image from 'next/image';
 
@@ -21,7 +21,7 @@ function SectionContactForm({
         )}
         <div className="section-contact-form__body">
           <div className="section-contact-form__form">
-            {/* here should be embedded form */}
+            <CtaForm />
           </div>
           {image ? (
             <div className="section-contact-form__image">

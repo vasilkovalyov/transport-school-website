@@ -23,7 +23,12 @@ function Button({
 
   return (
     <button
-      className={cn('btn', variantButton, className)}
+      className={cn(
+        'btn',
+        { 'btn--loading': isLoading },
+        variantButton,
+        className
+      )}
       {...props}
       disabled={isLoading}
     >

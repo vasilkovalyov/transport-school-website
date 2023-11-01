@@ -35,9 +35,12 @@
   }
 
   & &__form {
-    max-width: 360px;
-    height: 600px;
     width: 100%;
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet) {
+      max-width: 360px;
+    }
   }
 
   & &__image {
@@ -58,8 +61,6 @@
 
     @media (min-width: $widescreen) {
       position: relative;
-      top: 38px;
-      right: -46px;
       max-width: 500px;
     }
   }
