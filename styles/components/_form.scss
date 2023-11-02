@@ -12,6 +12,9 @@
     font-weight: $font-light;
     display: block;
     margin-bottom: 4px;
+    span {
+      font-size: 14px;
+    }
   }
 
   & &__select,

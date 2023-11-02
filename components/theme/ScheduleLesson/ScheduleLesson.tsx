@@ -1,10 +1,6 @@
+import { lessonType, lessonsGroup, shortDayNames } from '@/utils/common';
 import { Button } from '..';
 import { ScheduleLessonProps } from './ScheduleLesson.type';
-import {
-  lessonsGroup,
-  lessonType,
-  shortDayNames,
-} from './ScheduleLesson.utils';
 
 const getLastsDayToEvent = (startDate: string): number => {
   const lastsDaysTime = new Date(startDate).getTime() - new Date().getTime();
