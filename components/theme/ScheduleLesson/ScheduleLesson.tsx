@@ -1,6 +1,9 @@
+import { useRouter } from 'next/navigation';
+
 import { lessonType, lessonsGroup, shortDayNames } from '@/utils/common';
 import { Button } from '..';
 import { ScheduleLessonProps } from './ScheduleLesson.type';
+import { PAGE } from '@/axios/api-routes';
 
 const getLastsDayToEvent = (startDate: string): number => {
   const lastsDaysTime = new Date(startDate).getTime() - new Date().getTime();
@@ -8,6 +11,7 @@ const getLastsDayToEvent = (startDate: string): number => {
 };
 
 function ScheduleLesson({
+  _id,
   heading,
   date_start_event,
   days,
@@ -18,7 +22,9 @@ function ScheduleLesson({
   students = 0,
   max_people,
 }: ScheduleLessonProps) {
-  const [year, month, day] = date_start_event.split('-');
+  const router = useRouter();
+
+  const [year, month, day] = date_start_event.split('T')[0].split('-');
 
   const getDays = (days: number[]) => {
     if (days.length === 2) {
@@ -30,6 +36,11 @@ function ScheduleLesson({
     });
     return daysStr;
   };
+
+  function handleRedirect(lessonId: string) {
+    sessionStorage.setItem('lesson', lessonId);
+    router.push(PAGE.CONTACT);
+  }
 
   return (
     <div className="schedule-lesson">
@@ -66,7 +77,7 @@ function ScheduleLesson({
         </div>
       </div>
       <div className="schedule-lesson__action">
-        <Button href="/contact">ЗАПИСАТЬСЯ</Button>
+        <Button onClick={() => handleRedirect(_id)}>ЗАПИСАТЬСЯ</Button>
       </div>
     </div>
   );

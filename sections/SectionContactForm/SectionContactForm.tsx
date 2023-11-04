@@ -13,9 +13,7 @@ function SectionContactForm({
     <section className="section-contact-form">
       <Container className="container">
         <h3 className="section-contact-form__heading">{heading}</h3>
-        {rich_text && (
-          <p className="section-contact-form__subheading">{rich_text}</p>
-        )}
+        {rich_text && <div dangerouslySetInnerHTML={{ __html: rich_text }} />}
         {form_heading && (
           <p className="section-contact-form__form-title">{form_heading}</p>
         )}

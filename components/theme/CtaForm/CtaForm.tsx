@@ -12,7 +12,7 @@ import { CtaFormFieldsType, LessonGroupType } from './CtaForm.type';
 import schemaValidation from './CtaForm.validation';
 
 import CtaFormService from './CtaForm.service';
-import { lessonsGroup } from '@/utils/common';
+import { AxiosError } from 'axios';
 
 const service = new CtaFormService();
 
@@ -20,7 +20,7 @@ const defaultValuesForm: CtaFormFieldsType = {
   name: '',
   email: '',
   phone: '',
-  group: '',
+  lesson: '',
 };
 
 export default function CtaForm() {
@@ -29,10 +29,12 @@ export default function CtaForm() {
   const [selectedLesson, setSelectedLesson] = useState<LessonGroupType | null>(
     null
   );
+  const [formMessage, setFormMessage] = useState<string | null>(null);
 
   const {
     handleSubmit,
     control,
+    setValue,
     formState: { errors },
   } = useForm<CtaFormFieldsType>({
     mode: 'onSubmit',
@@ -40,11 +42,15 @@ export default function CtaForm() {
     resolver: yupResolver(schemaValidation),
   });
 
-  function onSubmit(props: CtaFormFieldsType) {
+  async function onSubmit(props: CtaFormFieldsType) {
     try {
       setLoading(true);
+      const response = await service.registerStudent(props);
+      setFormMessage(response.data.message);
     } catch (e) {
-      console.log(e);
+      if (e instanceof AxiosError) {
+        setFormMessage(e.response?.data.error);
+      }
     } finally {
       setLoading(false);
     }
@@ -53,17 +59,35 @@ export default function CtaForm() {
   async function loadLessons() {
     try {
       const response = await service.getLessons();
+      const lesson = getSelectedLesson(response.data.lessons);
+      if (lesson) {
+        setSelectedLesson(lesson);
+        setValue('lesson', lesson?._id);
+      }
       setLessons(response.data.lessons);
     } catch (e) {
       console.log(e);
     }
   }
 
-  function onHandleChangeGroup(idGroup: string) {
+  function onHandleChangeLesson(idGroup: string) {
+    sessionStorage.removeItem('lesson');
     const lesson = lessons.find((item) => item._id === idGroup);
     if (lesson) {
+      setValue('lesson', idGroup);
       setSelectedLesson(lesson);
     }
+  }
+
+  function getSelectedLesson(
+    lessons: LessonGroupType[]
+  ): LessonGroupType | null {
+    if (!lessons.length) return null;
+    const lessonId = sessionStorage.getItem('lesson');
+    if (!lessonId) return null;
+    const selectedLesson = lessons.filter((lesson) => lesson._id === lessonId);
+    if (!selectedLesson.length) return null;
+    return selectedLesson[0];
   }
 
   useEffect(() => {
@@ -142,22 +166,22 @@ export default function CtaForm() {
         )}
       </div>
       <div className="input-box">
-        <label htmlFor="group" className="input-box__label">
+        <label htmlFor="lesson" className="input-box__label">
           Группа <span>(выберете урок чтоб узнать детали)</span>
         </label>
         <Controller
-          name="group"
+          name="lesson"
           control={control}
           render={({ field }) => (
             <select
               {...field}
-              name="group"
-              id="group"
+              name="lesson"
+              id="lesson"
               className={cn('input-box__select', {
                 'input-box__select--error': errors.name,
               })}
               value={selectedLesson?._id}
-              onChange={(e) => onHandleChangeGroup(e.currentTarget.value)}
+              onChange={(e) => onHandleChangeLesson(e.currentTarget.value)}
             >
               <option value=""></option>
               {lessons.map((item) => (
@@ -170,14 +194,15 @@ export default function CtaForm() {
             </select>
           )}
         />
-        {errors.group && (
-          <p className="input-box__error-message">{errors.group.message}</p>
+        {errors.lesson && (
+          <p className="input-box__error-message">{errors.lesson.message}</p>
         )}
         {selectedLesson ? <ShortLessonInfo {...selectedLesson} /> : null}
       </div>
       <Button isLoading={loading} onClick={handleSubmit(onSubmit)}>
         Записаться
       </Button>
+      <h6>{formMessage}</h6>
     </form>
   );
 }

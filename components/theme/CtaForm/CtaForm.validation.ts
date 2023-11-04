@@ -10,5 +10,5 @@ export default yup.object().shape({
     )
     .required('Phone is required'),
   email: yup.string().email().required('Invalid email format'),
-  group: yup.string().required('Group is required'),
+  lesson: yup.string().required('Lesson is required'),
 });

@@ -26,7 +26,9 @@ function SectionScheduleLessons({
               <ScheduleLesson key={post._id} {...post} />
             ))}
           </div>
-        ) : null}
+        ) : (
+          <h6 className="ta-c">Нет предстоящих уроков</h6>
+        )}
         {nextPage ? (
           <div className="section-schedule-lessons__action ta-c">
             <button
