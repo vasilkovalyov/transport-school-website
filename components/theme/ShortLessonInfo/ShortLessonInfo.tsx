@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import { lessonType, lessonsGroup, shortDayNames } from '@/utils/common';
+import { lessonType, shortDayNames } from '@/utils/common';
 import { ShortLessonInfoProps } from './ShortLessonInfo.type';
 
 export default function ShortLessonInfo({
@@ -19,7 +19,7 @@ export default function ShortLessonInfo({
         Урок - <strong>{heading}</strong>
       </li>
       <li className="lesson-short-info__type-group">
-        Группа - <strong>{lessonsGroup[type_group]}</strong>
+        Группа - <strong>{type_group}</strong>
       </li>
       <li className="lesson-short-info__date">
         Дата урока -{' '}
