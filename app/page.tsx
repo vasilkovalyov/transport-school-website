@@ -6,6 +6,8 @@ import { SectionServerError } from '@/sections';
 
 const PAGE_NAME = 'Home';
 
+export const dynamic = 'force-dynamic';
+
 async function getData() {
   try {
     const service = new PageService();
