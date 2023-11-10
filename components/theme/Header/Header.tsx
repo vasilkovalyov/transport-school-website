@@ -1,5 +1,6 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import cn from 'classnames';
 import Image from 'next/image';
@@ -17,6 +18,7 @@ const service = new ContactsService();
 const navActiveCn = 'nav-active';
 
 function Header() {
+  const pathname = usePathname();
   const [contacts, setContacts] = useState<CommonContactsType | null>(null);
   const [activeMenu, setActiveMenu] = useState<boolean>(false);
 
@@ -28,6 +30,10 @@ function Header() {
   useEffect(() => {
     loadContacts();
   }, []);
+
+  useEffect(() => {
+    document.body.classList.remove(navActiveCn);
+  }, [pathname]);
 
   useEffect(() => {
     if (activeMenu) {
