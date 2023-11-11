@@ -6,7 +6,7 @@ function BlogPost({ slug, image, heading, short_description }: BlogPostProps) {
   return (
     <div className="blog base-shadow">
       {image ? (
-        <div className="blog__image">
+        <Link href={slug} className="blog__image">
           <Image
             src={image}
             alt={heading}
@@ -15,7 +15,7 @@ function BlogPost({ slug, image, heading, short_description }: BlogPostProps) {
             height={0}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-        </div>
+        </Link>
       ) : null}
       <div className="blog__body">
         <h6 className="blog__heading font-medium">
