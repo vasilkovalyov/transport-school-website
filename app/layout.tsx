@@ -8,7 +8,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning={true}>
         <div id="wrapper">
           <Header />
           <main className="main">{children}</main>

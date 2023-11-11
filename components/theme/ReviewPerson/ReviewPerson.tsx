@@ -3,7 +3,7 @@ import { ReviewPersonProps } from './ReviewPerson.type';
 
 function ReviewPerson({ image, text, name, rating }: ReviewPersonProps) {
   return (
-    <div className="review base-shadow ta-c">
+    <div className="review ta-c">
       {image ? (
         <div className="review__image">
           <Image src={image} alt={name} priority width={80} height={80} />
