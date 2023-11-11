@@ -5,6 +5,22 @@ import api from '@/axios/api';
 import { PageSingleBlogType } from './page.type';
 import { AxiosResponse } from 'axios';
 
+type Props = {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const postSeo = await api.get(`post-seo/${params.slug}`);
+  const { title, description, keywords } = postSeo.data;
+
+  return {
+    title: title || 'post',
+    description: description || 'post description',
+    keywords: keywords || 'post keywords',
+  };
+}
+
 async function getData(
   slug: string
 ): Promise<AxiosResponse<PageSingleBlogType> | null> {
@@ -15,10 +31,6 @@ async function getData(
     return null;
   }
 }
-
-export const metadata: Metadata = {
-  title: 'Post',
-};
 
 export default async function Post(props: { params: { slug: string } }) {
   const response = await getData(props.params.slug);
