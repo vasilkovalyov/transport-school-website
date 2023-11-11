@@ -5,7 +5,7 @@
     padding: 80px 0;
   }
 
-  @media (min-width: $widescreen) {
+  @media (min-width: $widescreen_md) {
     padding: 144px 0;
   }
 
@@ -18,7 +18,7 @@
       margin: 0 auto 40px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: $widescreen_md) {
       margin: 0 auto 80px;
     }
   }
@@ -30,7 +30,7 @@
       margin-bottom: 40px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: $widescreen_md) {
       margin-bottom: 80px;
     }
   }

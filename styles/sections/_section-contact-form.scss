@@ -5,7 +5,7 @@
     padding: 80px 0;
   }
 
-  @media (min-width: $widescreen) {
+  @media (min-width: $widescreen_md) {
     padding: 90px 0 118px;
   }
 
@@ -59,7 +59,7 @@
       max-width: 400px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: $widescreen_md) {
       position: relative;
       max-width: 500px;
     }

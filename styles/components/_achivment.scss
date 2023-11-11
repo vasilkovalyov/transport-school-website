@@ -1,7 +1,7 @@
 .achivment {
   margin-bottom: 24px;
 
-  @media (min-width: $widescreen) {
+  @media (min-width: $widescreen_md) {
     margin-bottom: 66px;
   }
 
@@ -18,7 +18,7 @@
       font-size: 120px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: $widescreen_md) {
       font-size: 202px;
     }
   }
@@ -30,7 +30,7 @@
       font-size: 80px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: $widescreen_md) {
       font-size: 92px;
     }
   }
@@ -42,7 +42,7 @@
       font-size: 60px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: $widescreen_md) {
       font-size: 82px;
     }
   }

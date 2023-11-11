@@ -5,13 +5,18 @@
     padding: 80px 0;
   }
 
-  @media (min-width: $widescreen) {
+  @media (min-width: $widescreen_md) {
     padding: 188px 0 156px;
   }
 
   & &__container {
     @media (min-width: $tablet) {
       display: flex;
+      align-items: flex-start;
+    }
+
+    @media (min-width: $widescreen) {
+      align-items: center;
     }
   }
 
@@ -24,7 +29,7 @@
       margin-right: 20px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: $widescreen_md) {
       max-width: 654px;
       margin-right: 32px;
     }
@@ -32,6 +37,14 @@
 
   & &__heading {
     margin-bottom: 40px;
+  }
+
+  & &__text {
+    br {
+      @media (max-width: $widescreen_max) {
+        display: none;
+      }
+    }
   }
 
   & &__image {
@@ -54,7 +67,7 @@
       max-width: 60%;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: $widescreen_md) {
       position: relative;
       right: -36px;
     }

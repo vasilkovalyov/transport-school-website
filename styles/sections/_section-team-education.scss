@@ -1,7 +1,7 @@
 .section-team-education {
   padding: 40px 0;
 
-  @media (min-width: $widescreen) {
+  @media (min-width: $widescreen_md) {
     padding: 100px 0 90px;
   }
 
@@ -16,7 +16,7 @@
       margin-bottom: 60px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: $widescreen_md) {
       margin-bottom: 114px;
     }
   }

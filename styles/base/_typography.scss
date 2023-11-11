@@ -13,107 +13,107 @@ h5,
 h6,
 .h6,
 .h {
-    font-family: $headings-font-family;
-    font-weight: $headings-font-weight;
-    line-height: $headings-line-height;
-    margin: 0 0 10px;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  margin: 0 0 10px;
 }
 
 h1,
 .h1 {
-    font-size: $h1-small;
+  font-size: $h1-small;
 
-    @media screen and (min-width: $tablet) {
-        font-size: $h1-middle;
-    }
-    @media screen and (min-width: $widescreen) {
-        font-size: $h1-large;
-    }
+  @media screen and (min-width: $tablet) {
+    font-size: $h1-middle;
+  }
+  @media screen and (min-width: $widescreen_md) {
+    font-size: $h1-large;
+  }
 }
 
 h2,
 .h2 {
-    font-size: $h2-small;
+  font-size: $h2-small;
 
-    @media screen and (min-width: $tablet) {
-        font-size: $h2-middle;
-    }
+  @media screen and (min-width: $tablet) {
+    font-size: $h2-middle;
+  }
 
-    @media screen and (min-width: $widescreen) {
-        font-size: $h2-large;
-    }
+  @media screen and (min-width: $widescreen_md) {
+    font-size: $h2-large;
+  }
 }
 
 h3,
 .h3 {
-    font-size: $h3-small;
+  font-size: $h3-small;
 
-    @media screen and (min-width: $tablet) {
-        font-size: $h3-middle;
-    }
+  @media screen and (min-width: $tablet) {
+    font-size: $h3-middle;
+  }
 
-    @media screen and (min-width: $widescreen) {
-        font-size: $h3-large;
-    }
+  @media screen and (min-width: $widescreen_md) {
+    font-size: $h3-large;
+  }
 }
 
 h4,
 .h4 {
-    font-size: $h4-small;
+  font-size: $h4-small;
 
-    @media screen and (min-width: $tablet) {
-        font-size: $h4-middle;
-    }
+  @media screen and (min-width: $tablet) {
+    font-size: $h4-middle;
+  }
 
-    @media screen and (min-width: $widescreen) {
-        font-size: $h4-large;
-    }
+  @media screen and (min-width: $widescreen_md) {
+    font-size: $h4-large;
+  }
 }
 
 h5,
 .h5 {
-    font-size: $h5-small;
+  font-size: $h5-small;
 
-    @media screen and (min-width: $tablet) {
-        font-size: $h5-middle;
-    }
+  @media screen and (min-width: $tablet) {
+    font-size: $h5-middle;
+  }
 
-    @media screen and (min-width: $widescreen) {
-        font-size: $h5-large;
-    }
+  @media screen and (min-width: $widescreen_md) {
+    font-size: $h5-large;
+  }
 }
 
 h6,
 .h6 {
-    font-size: $h6-small;
+  font-size: $h6-small;
 
-    @media screen and (min-width: $tablet) {
-        font-size: $h6-middle;
-    }
+  @media screen and (min-width: $tablet) {
+    font-size: $h6-middle;
+  }
 
-    @media screen and (min-width: $widescreen) {
-        font-size: $h6-large;
-    }
+  @media screen and (min-width: $widescreen_md) {
+    font-size: $h6-large;
+  }
 }
 
 p {
-    margin: 0 0 24px;
-    font-weight: $font-light;
-    line-height: $line-height-base;
-    font-size: $font-size-base;
+  margin: 0 0 24px;
+  font-weight: $font-light;
+  line-height: $line-height-base;
+  font-size: $font-size-base;
 }
 
 a {
-    @include animate(color opacity background-color border-color box-shadow);
+  @include animate(color opacity background-color border-color box-shadow);
 }
 
 a:not([class]) {
-    color: inherit;
-    text-decoration: $link-decoration;
+  color: inherit;
+  text-decoration: $link-decoration;
 
-    &:hover,
-    &:focus {
-        text-decoration: $link-hover-decoration;
-        opacity: $hover-opacity-link;
-    }
+  &:hover,
+  &:focus {
+    text-decoration: $link-hover-decoration;
+    opacity: $hover-opacity-link;
+  }
 }
